@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    {% if acf.content_builder is defined and acf.content_builder.value %}
+        {% for panel in acf.content_builder.value %}
+            <section class="panel {{ panel.acf_fc_layout }}">
+                {% include 'panels/'~panel.acf_fc_layout~'.html.twig' with {"panel": panel} %}
+            </section>
+        {% endfor %}
+    {% else %}
+        <div class="row column">
+            <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+                <div>
+                    {{post.content}}
+                </div>
+
+                <div class="share">
+                    <h4>Share</h4>
+                    {% include 'panels/sharethis.html.twig' %}
+                </div>
+            </article>
+        </div>
+    {% endif %}
+{% endblock %}
