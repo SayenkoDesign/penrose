@@ -27,7 +27,8 @@ parameters:
   wordpress.sidebars:
     - { id: "sample_sidebar", name: "sample sidebar", description: "sample sidebar managed by config file" }
   wordpress.styles:
-    - { id: "app", source: "%template_uri%/web/stylesheets/app.css", deps: ~ }
+    - { id: "fonts", source: "https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Open+Sans:400,400i,700,700i", deps: ~ }
+    - { id: "app", source: "%template_uri%/web/stylesheets/app.css", deps: ['fonts'] }
   wordpress.scripts:
     - { id: "app", source: "%template_uri%/web/scripts-min/app.min.js", deps: ~, header: false }
 
