@@ -3,7 +3,7 @@ require_once __DIR__.'/../app/bootstrap.php';
 use Timber\Timber;
 
 /** @var $container \Symfony\Component\DependencyInjection\Container */
-Timber::$locations = $container->getParameterBag()->resolveValue($container->getParameter('twig.paths'));
+Timber::$dirname = $container->getParameter('twig.paths');
 
 /***********************************************************************************************************************
  * Actions
@@ -47,7 +47,7 @@ add_action('init', function () use($container) {
             'page_title' => 'Theme Options',
             'capability' => 'edit_theme_options',
             'icon_url' => 'dashicons-sayenko',
-            'position' => 59,
+            'position' => 60,
         ]);
     }
 
