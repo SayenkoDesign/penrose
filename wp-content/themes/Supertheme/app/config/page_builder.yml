@@ -1,0 +1,64 @@
+key: "group_page_builder"
+title: "Page Builder"
+location:
+  -
+    - { param: "post_type", operator: "==", value: "page" }
+menu_order: 0
+position: "acf_after_title"
+style: "default"
+label_placement: "top"
+instruction_placement: "label"
+hide_on_screen: ["the_content"]
+active: 1
+description:
+fields:
+    -
+        key: "field_builder"
+        label: "Content Builder"
+        name: "content_builder"
+        type: "flexible_content"
+        instructions:
+        required: 0
+        wrapper: { width: "", class: "", id: "" }
+        button_label: "Add Row"
+        layouts:
+            -
+                key: "layout_basic"
+                name: "basic_content"
+                label: "Basic Content"
+                instructions: "Basic content on a whate background"
+                display: "block"
+                sub_fields:
+                    -
+                        key: "field_drop_caps_letter"
+                        label: "Drop Caps Letter"
+                        name: "drop_caps_letter"
+                        type: "text"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "", class: "", id: "" }
+                        default_value:
+                    -
+                        key: "field_drop_caps_content"
+                        label: "Drop Caps Content"
+                        name: "drop_caps_content"
+                        type: "textarea"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "", class: "", id: "" }
+                        default_value:
+                    -
+                        key: "field_basic_content"
+                        label: "Content"
+                        name: "content"
+                        type: "wysiwyg"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "", class: "", id: "" }
+                        default_value:
+                        tabs: "all"
+                        toolbar: "full"
+                        media_upload: 1
