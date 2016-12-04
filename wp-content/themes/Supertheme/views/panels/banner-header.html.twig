@@ -1,0 +1,5 @@
+<header class="banner-header" style="background-image: url({% if background and background.src %}{{ background.src }}{% else %}{{ default_header_background.url }}{% endif %});">
+    <div class="row column">
+        <h1>{% if title is defined and title %}{{ title }}{% else %}{{ post.title }}{% endif %}</h1>
+    </div>
+</header>

@@ -1,5 +1,8 @@
 {% extends "base.html.twig" %}
 
+{% block header %}
+    {% include 'panels/banner-header.html.twig' with {title: post.get_field('header_heading'), background:  TimberImage(post.get_field('header_background'))}%}
+{% endblock %}
 {% block body %}
     {% if acf.content_builder is defined and acf.content_builder.value %}
         {% for panel in acf.content_builder.value %}
