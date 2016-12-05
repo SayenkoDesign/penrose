@@ -41,13 +41,47 @@
         <div data-sticky-container>
             <div class="sticky" data-sticky data-sticky-on="small" data-top-anchor="sticky-start:top" data-margin-top="0" style="width:100%">
                 <div class="large-menu hide-for-small-only">
-                    <div class="row column text-center">
-                        <a href="{{ site.link }}" class="home"><img src="{{ logo.url }}" alt="{{ site.title }}"></a>
-                        <nav>
-                            {% if menu is defined %}
-                                {% include 'menu-dropdown.html.twig' %}
-                            {% endif %}
-                        </nav>
+                    <div class="top">
+                        <div class="row align-middle">
+                            <div class="column">
+                                <a href="{{ directions }}"><i class="fa fa-map-marker"></i> Lacey, WA</a>
+                            </div>
+                            <div class="column">
+                                <ul class="horizontal menu align-right">
+                                    <li><a href="{{ phone_url }}">{{ phone }}</a></li>
+                                    <li><a href="#appointment" class="fancybox primary button">Schedule an Evaluation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="row align-middle">
+                            <div class="shrink column">
+                                <a href="{{ site.link }}" class="home"><img src="{{ logo.url }}" alt="{{ site.title }}"></a>
+                            </div>
+                            <div class="column">
+                                <nav>
+                                    {% if menu is defined %}
+                                        {% if menu %}
+                                            <ul class="horizontal dropdown menu align-right" data-dropdown-menu>
+                                                {% for item in menu.get_items %}
+                                                    <li class="{{item.classes | join(' ')}}">
+                                                        <a href="{{item.get_link}}">{{item.title}}</a>
+                                                        {% if item.get_children %}
+                                                            <ul class="menu">
+                                                                {% for child in item.get_children %}
+                                                                    <li class="{{child.classes | join(' ')}}"><a href="{{child.get_link}}">{{child.title}}</a></li>
+                                                                {% endfor %}
+                                                            </ul>
+                                                        {% endif %}
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        {% endif %}
+                                    {% endif %}
+                                </nav>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="mobile-menu-bar" data-responsive-toggle="small-menu" data-hide-for="medium">

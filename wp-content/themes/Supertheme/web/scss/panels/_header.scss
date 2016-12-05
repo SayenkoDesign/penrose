@@ -1,0 +1,34 @@
+.sticky {
+  background-color: $body-background;
+  .top {
+    background-color: $light-gray;
+    font-size: rem-calc(18px);
+    .fa {
+      font-size: rem-calc(26px);
+    }
+    .menu {
+      a {
+        font-size: rem-calc(22px);
+      }
+      .button {
+        font-size: rem-calc(16px);
+        text-transform: uppercase;
+        padding: $global-padding;
+      }
+    }
+  }
+  .bottom {
+    padding: $global-padding 0 $global-padding*3 0;
+    background-image: url('../images-min/header-bar.min.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    font-family: $header-font-family;
+    a {
+      color: #254e54;
+      &:hover {
+        color: $anchor-color-hover;
+      }
+    }
+  }
+}
