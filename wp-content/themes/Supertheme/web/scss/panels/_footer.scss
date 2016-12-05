@@ -1,0 +1,97 @@
+.footer {
+  background-image: url('../images-min/footer-bar.min.png');
+  background-color: $light-gray;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding: $global-padding*4 0 $global-padding*2 0;
+
+  .cta {
+    font-weight: bold;
+    font-family: $header-font-family;
+    margin-bottom: $global-padding*3;
+    .cta-icon {
+      display: block;
+      width: rem-calc(60px);
+      height: rem-calc(60px);
+      background-color: $primary-color;
+      border-radius: 100%;
+      float: left;
+      margin-right: $global-padding;
+      margin-bottom: $global-margin;
+      @include breakpoint(large) {
+        margin-bottom: 0;
+      }
+      &:hover {
+        background-color: scale_color($primary-color, $lightness: -14%);
+      }
+    }
+    .cta-line-1, .cta-line-2 {
+      color: #254e54;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+    .cta-line-1 {
+      font-size: rem-calc(16px);
+      margin-top: rem-calc(8px);
+    }
+    .cta-line-2 {
+      font-size: rem-calc(21px);
+    }
+    .hours {
+      font-size: rem-calc(16px);
+      color: $dark-gray;
+      @include breakpoint(large) {
+        text-align: right;
+      }
+    }
+  }
+
+  .copyright {
+    font-size: rem-calc(14px);
+    color: $dark-gray;
+    p {
+      margin: 0;
+    }
+    .shrink {
+      @include breakpoint(large) {
+        flex: 0 0 auto !important
+      }
+    }
+    .border {
+      border-top: 1px solid $medium-gray;
+      padding-top: $global-padding;
+    }
+    .menu {
+      margin-bottom: $global-margin;
+      @include breakpoint(large) {
+        margin-bottom: 0;
+      }
+      li {
+        margin-left: $global-margin/2;
+      }
+      a {
+        background-color: $dark-gray;
+        color: $white;
+        border-radius: 100%;
+        width: 32px;
+        height: 32px;
+        position: relative;
+        &:hover {
+          background-color: scale_color($dark-gray, $lightness: -14%);
+        }
+        &::before{
+          position: relative;
+          left: -6px;
+          top: -2px;
+        }
+        &.fa-facebook::before {
+          left: -4px;
+        }
+        &.fa-google-plus::before {
+          left: -8px;
+        }
+      }
+    }
+  }
+}

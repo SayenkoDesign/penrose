@@ -118,3 +118,108 @@ fields:
     max_height:  ""
     max_size:  ""
     mime_types:  ""
+  -
+    key:  "field_facebook"
+    label:  "Facebook"
+    name:  "facebook"
+    type:  "url"
+    instructions:  ""
+    required:  0
+    conditional_logic:  0
+    wrapper:  { width:  "25", class:  "", id:  "" }
+  -
+    key:  "field_instagram"
+    label:  "Instagram"
+    name:  "instagram"
+    type:  "url"
+    instructions:  ""
+    required:  0
+    conditional_logic:  0
+    wrapper:  { width:  "25", class:  "", id:  "" }
+  -
+    key:  "field_pinterest"
+    label:  "Pinterest"
+    name:  "Pinterest"
+    type:  "url"
+    instructions:  ""
+    required:  0
+    conditional_logic:  0
+    wrapper:  { width:  "25", class:  "", id:  "" }
+  -
+    key:  "field_google_plus"
+    label:  "Google Plus"
+    name:  "google_plus"
+    type:  "url"
+    instructions:  ""
+    required:  0
+    conditional_logic:  0
+    wrapper:  { width:  "25", class:  "", id:  "" }
+  -
+    key:  "field_phone"
+    label:  "Phone Number"
+    name:  "Phone"
+    type:  "text"
+    instructions:  ""
+    required:  1
+    conditional_logic:  0
+    wrapper:  { width:  "25", class:  "", id:  "" }
+  -
+    key:  "field_address_1"
+    label:  "Address Line 1"
+    name:  "address_1"
+    type:  "text"
+    instructions:  ""
+    required:  1
+    conditional_logic:  0
+    wrapper:  { width:  "25", class:  "", id:  "" }
+  -
+    key:  "field_address_2"
+    label:  "Address Line 2"
+    name:  "address_2"
+    type:  "text"
+    instructions:  ""
+    required:  1
+    conditional_logic:  0
+    wrapper:  { width:  "25", class:  "", id:  "" }
+  -
+    key:  "field_directions"
+    label:  "Google Directions Link"
+    name:  "directions_link"
+    type:  "text"
+    instructions:  ""
+    required:  1
+    conditional_logic:  0
+    wrapper:  { width:  "25", class:  "", id:  "" }
+  -
+    key:  "field_form_id"
+    label:  "Contact Form ID"
+    name:  "contact_form_id"
+    type:  "text"
+    instructions:  ""
+    required:  1
+    conditional_logic:  0
+    wrapper:  { width:  "25", class:  "", id:  "" }
+  -
+    key:  "field_hours"
+    label:  "Hours"
+    name:  "hours"
+    type:  "wysiwyg"
+    instructions:  ""
+    required:  0
+    conditional_logic:  0
+    wrapper:  { width:  "75", class:  "", id:  "" }
+    tabs: "all"
+    toolbar: "basic"
+    media_upload: 0
+  -
+    key:  "field_copyright"
+    label:  "Copyright Content"
+    name:  "copyright"
+    type:  "wysiwyg"
+    instructions:  ""
+    required:  0
+    conditional_logic:  0
+    wrapper:  { width:  "", class:  "", id:  "" }
+    tabs: "all"
+    toolbar: "basic"
+    media_upload: 0
