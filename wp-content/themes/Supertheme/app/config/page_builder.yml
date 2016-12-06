@@ -62,3 +62,53 @@ fields:
                         tabs: "all"
                         toolbar: "full"
                         media_upload: 1
+            -
+                key: "layout_video"
+                name: "video_content"
+                label: "Video"
+                instructions: "large image and text with lightbox video"
+                display: "block"
+                sub_fields:
+                    -
+                        key: "field_video_image"
+                        label: "Video Image"
+                        name: "video_background"
+                        type: "image"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "50", class: "", id: "" }
+                        default_value:
+                        return_format:  "array"
+                        preview_size:  "thumbnail"
+                        library:  "all"
+                        min_width:  ""
+                        min_height:  ""
+                        min_size:  ""
+                        max_width:  ""
+                        max_height:  ""
+                        max_size:  ""
+                        mime_types:  ""
+                    -
+                        key: "field_video"
+                        label: "Video URL"
+                        name: "video_embed"
+                        type: "url"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "50", class: "", id: "" }
+                        default_value:
+                    -
+                        key: "field_video_content"
+                        label: "Content"
+                        name: "video_content"
+                        type: "wysiwyg"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "", class: "", id: "" }
+                        default_value:
+                        tabs: "all"
+                        toolbar: "full"
+                        media_upload: 0

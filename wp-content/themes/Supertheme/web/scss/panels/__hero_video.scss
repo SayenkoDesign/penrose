@@ -1,0 +1,25 @@
+.hero-video {
+  color: $white;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  padding: $global-padding*2 0;
+  font-size: rem-calc(24px);
+  .align-middle {
+    min-height: rem-calc($global-padding * 15);
+    @include breakpoint(medium) {
+      min-height: rem-calc($global-padding * 25);
+    }
+    @include breakpoint(large) {
+      min-height: rem-calc($global-padding * 35);
+    }
+  }
+  .fancybox-media {
+    width: rem-calc(70px);
+    height: rem-calc(71px);
+    display: block;
+    background-image: url('../images-min/video-icon.min.png');
+    margin: 0 auto $global-padding auto;
+  }
+}

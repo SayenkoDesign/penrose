@@ -5,7 +5,7 @@ location:
     - { param: "post_type", operator: "==", value: "post" }
   -
     - { param: "post_type", operator: "==", value: "page" }
-menu_order: 0
+menu_order: 1
 position: "side"
 style: "default"
 label_placement: "top"
