@@ -1,0 +1,60 @@
+.navigation_content {
+  font-family: $header-font-family;
+  @include breakpoint(large) {
+    background: -moz-linear-gradient(left, $two-column-background 33%, $body-background 33%);
+    background: -webkit-gradient(linear, left top, right top, from($two-column-background), color-stop(0.33, $two-column-background), color-stop(0.33, $body-background));
+  }
+  @include breakpoint(xxlarge) {
+    background: -moz-linear-gradient(left, $two-column-background 35%, $body-background 35%);
+    background: -webkit-gradient(linear, left top, right top, from($two-column-background), color-stop(0.35, $two-column-background), color-stop(0.35, $body-background));
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: $secondary-color;
+  }
+  h3 {
+    margin: 0;
+  }
+  h3::after {
+    content: " ";
+    display: block;
+    height: rem-calc(2px);
+    width: $global-padding*5;
+    background-color: $primary-color;
+    margin: $global-margin*0.6 0 $global-margin;
+  }
+  ul.no-bullet {
+    line-height: 2;
+    a {
+      color: $dark-gray;
+      &:hover {
+        color: $anchor-color-hover;
+      }
+    }
+  }
+  .columns {
+    padding-top: $global-margin;
+    @include breakpoint(large) {
+      padding: $global-padding*2 $global-padding*3;
+    }
+    position: relative;
+    &:not(.medium-6) {
+      background: #e8e6e6;
+      color: #254e54;
+      @include breakpoint(large) {
+        padding: $global-padding*2 $global-padding;
+      }
+    }
+  }
+  .triangle {
+    @include breakpoint(large) {
+      position: absolute;
+      top: $global-padding*1.5;
+      left: 100%;
+      width: 0;
+      height: 0;
+      border-top: $global-padding*2 solid transparent;
+      border-bottom: $global-padding*2 solid transparent;
+      border-left: $global-padding*1.5 solid #e8e6e6;
+    }
+  }
+}

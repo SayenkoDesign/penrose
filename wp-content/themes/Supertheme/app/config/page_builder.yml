@@ -112,3 +112,116 @@ fields:
                         tabs: "all"
                         toolbar: "full"
                         media_upload: 0
+            -
+                key: "layout_navigation"
+                name: "navigation_content"
+                label: "Navigation Row"
+                instructions: "Three columns. One with content and the other two with navigation list"
+                display: "block"
+                sub_fields:
+                    -
+                        key: "field_nvaigation_first_heading"
+                        label: "First heading"
+                        name: "first_heading"
+                        type: "text"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "50", class: "", id: "" }
+                    -
+                        key: "field_nvaigation_first_content"
+                        label: "First column content"
+                        name: "first_content"
+                        type: "wysiwyg"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "50", class: "", id: "" }
+                        default_value:
+                        tabs: "all"
+                        toolbar: "basic"
+                        media_upload: 0
+                    -
+                        key: "field_nvaigation_second_heading"
+                        label: "Second heading"
+                        name: "second_heading"
+                        type: "text"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "50", class: "", id: "" }
+                    -
+                        key: "field_nvaigation_second_links"
+                        label: "Second column links"
+                        name: "second_links"
+                        type: "repeater"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "50", class: "", id: "" }
+                        collapsed:
+                        min: 1
+                        max: 0
+                        layout: block
+                        button_label: Add Row
+                        sub_fields:
+                          -
+                            key:  "field_navigation_second_link_title"
+                            label:  "text"
+                            name:  "second_title"
+                            type:  "text"
+                            instructions:  ""
+                            required:  1,
+                            conditional_logic:  0,
+                            wrapper:  { width:  "50", class:  "", id:  "" }
+                          -
+                            key:  "field_navigation_second_link_link"
+                            label:  "url"
+                            name:  "second_url"
+                            type:  "url"
+                            instructions:  ""
+                            required:  1,
+                            conditional_logic:  0,
+                            wrapper:  { width:  "50", class:  "", id:  "" }
+                    -
+                        key: "field_nvaigation_third_heading"
+                        label: "Third heading"
+                        name: "third_heading"
+                        type: "text"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "50", class: "", id: "" }
+                    -
+                        key: "field_nvaigation_third_links"
+                        label: "Third column links"
+                        name: "third_links"
+                        type: "repeater"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "50", class: "", id: "" }
+                        collapsed:
+                        min: 1
+                        max: 0
+                        layout: block
+                        button_label: Add Row
+                        sub_fields:
+                          -
+                            key:  "field_navigation_third_link_title"
+                            label:  "text"
+                            name:  "third_title"
+                            type:  "text"
+                            instructions:  ""
+                            required:  1,
+                            conditional_logic:  0,
+                            wrapper:  { width:  "50", class:  "", id:  "" }
+                          -
+                            key:  "field_navigation_third_link_link"
+                            label:  "url"
+                            name:  "third_url"
+                            type:  "url"
+                            instructions:  ""
+                            required:  1,
+                            conditional_logic:  0,
+                            wrapper:  { width:  "50", class:  "", id:  "" }
