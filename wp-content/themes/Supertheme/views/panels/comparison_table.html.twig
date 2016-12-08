@@ -1,0 +1,21 @@
+<div class="row column">
+    <h3>{{ panel.heading }}</h3>
+    <table>
+        <thead>
+        <tr>
+            <th>Comparison</th>
+            <th>Our Approach <div class="vs">VS</div></th>
+            <th>Typical Physical Therapist</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for row in panel.comparison_table %}
+            <tr>
+                <td>{{ row.comparison_text }}</td>
+                <td><i class="fa fa-check-circle"></i></td>
+                <td><i class="fa fa-times-circle"></i><div class="content">{{ row.typical_text }}</div></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>

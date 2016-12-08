@@ -1,0 +1,101 @@
+.comparison_table {
+  padding: $global-margin*2 0;
+  background-color: $light-gray;
+  h3 {
+    color: $secondary-color;
+    margin-bottom: $global-margin;
+  }
+  table {
+    border: 2px $dark-gray solid;
+  }
+  th {
+    color: $white;
+    font-size: rem-calc(20px);
+    font-weight: normal;
+    text-transform: uppercase;
+    position: relative;
+    padding: rem-calc(15px);
+    background-color: $primary-color;
+    border-width: 0;
+    &:first-of-type {
+    }
+    &:nth-child(2) {
+      text-align: center;
+    }
+    &:last-of-type {
+      background-color: #254e54;
+      padding-left: rem-calc(58px);
+    }
+  }
+  tr {
+    td {
+      padding: rem-calc(8px);
+      @include breakpoint(321px) {
+        padding: rem-calc(16px);
+      }
+    }
+    td:nth-child(1) {
+      border-right: 1px $dark-gray solid;
+      text-align: left;
+      font-size: rem-calc(24px);
+    }
+    td:nth-child(2) {
+      text-align: center;
+      font-weight: bold;
+      > i {
+        color: $primary-color;
+      }
+    }
+    td:nth-child(3) {
+      position: relative;
+      border-left: 1px $secondary-color solid;
+      font-size: rem-calc(16px);
+      text-align: center;
+      @include breakpoint(small only) {
+        font-size: 0;
+      }
+      @include breakpoint(medium) {
+        text-align: left;
+        width: rem-calc(430px);
+      }
+      i.fa {
+        color: #ed1c24;
+        margin-right: rem-calc(5px);
+        font-size: rem-calc(28px);
+
+        @include breakpoint(321px) {
+          font-size: rem-calc(36px);
+        }
+        @include breakpoint(medium) {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      .content {
+        padding-left: rem-calc(40px);
+      }
+    }
+    i.fa {
+      font-size: rem-calc(36px);
+    }
+  }
+  .vs {
+    color: #254e54;
+    font-size: rem-calc(30px);
+    height: rem-calc(100px);
+    width: rem-calc(100px);
+    text-align: center;
+    border-radius: 50%;
+    border: 1px $dark-gray solid;
+    background: $white;
+    padding-top: rem-calc(30px);
+    position: absolute;
+    right: rem-calc(-52px);
+    top: rem-calc(-(20px));
+    z-index: 1;
+    @include breakpoint(small only){
+      display: none;
+    }
+  }
+}

@@ -165,24 +165,24 @@ fields:
                         layout: block
                         button_label: Add Row
                         sub_fields:
-                          -
-                            key:  "field_navigation_second_link_title"
-                            label:  "text"
-                            name:  "second_title"
-                            type:  "text"
-                            instructions:  ""
-                            required:  1,
-                            conditional_logic:  0,
-                            wrapper:  { width:  "50", class:  "", id:  "" }
-                          -
-                            key:  "field_navigation_second_link_link"
-                            label:  "url"
-                            name:  "second_url"
-                            type:  "url"
-                            instructions:  ""
-                            required:  1,
-                            conditional_logic:  0,
-                            wrapper:  { width:  "50", class:  "", id:  "" }
+                            -
+                                key:  "field_navigation_second_link_title"
+                                label:  "text"
+                                name:  "second_title"
+                                type:  "text"
+                                instructions:  ""
+                                required:  1,
+                                conditional_logic:  0,
+                                wrapper:  { width:  "50", class:  "", id:  "" }
+                            -
+                                key:  "field_navigation_second_link_link"
+                                label:  "url"
+                                name:  "second_url"
+                                type:  "url"
+                                instructions:  ""
+                                required:  1,
+                                conditional_logic:  0,
+                                wrapper:  { width:  "50", class:  "", id:  "" }
                     -
                         key: "field_nvaigation_third_heading"
                         label: "Third heading"
@@ -207,21 +207,70 @@ fields:
                         layout: block
                         button_label: Add Row
                         sub_fields:
-                          -
-                            key:  "field_navigation_third_link_title"
-                            label:  "text"
-                            name:  "third_title"
-                            type:  "text"
-                            instructions:  ""
-                            required:  1,
-                            conditional_logic:  0,
-                            wrapper:  { width:  "50", class:  "", id:  "" }
-                          -
-                            key:  "field_navigation_third_link_link"
-                            label:  "url"
-                            name:  "third_url"
-                            type:  "url"
-                            instructions:  ""
-                            required:  1,
-                            conditional_logic:  0,
-                            wrapper:  { width:  "50", class:  "", id:  "" }
+                            -
+                                key:  "field_navigation_third_link_title"
+                                label:  "text"
+                                name:  "third_title"
+                                type:  "text"
+                                instructions:  ""
+                                required:  1,
+                                conditional_logic:  0,
+                                wrapper:  { width:  "50", class:  "", id:  "" }
+                            -
+                                key:  "field_navigation_third_link_link"
+                                label:  "url"
+                                name:  "third_url"
+                                type:  "url"
+                                instructions:  ""
+                                required:  1,
+                                conditional_logic:  0,
+                                wrapper:  { width:  "50", class:  "", id:  "" }
+            -
+                key: "layout_comparison"
+                name: "comparison_table"
+                label: "Comparison Table"
+                instructions: ""
+                display: "block"
+                sub_fields:
+                    -
+                        key: "field_comparison_heading"
+                        label: "Heading"
+                        name: "heading"
+                        type: "text"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "", class: "", id: "" }
+                    -
+                        key: "field_comparison_table"
+                        label: "Table"
+                        name: "comparison_table"
+                        type: "repeater"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "", class: "", id: "" }
+                        collapsed:
+                        min: 1
+                        max: 0
+                        layout: "block"
+                        button_label: "Add Row"
+                        sub_fields:
+                            -
+                                key: "field_comparison_text"
+                                label: "Comparison"
+                                name: "comparison_text"
+                                type: "text"
+                                instructions:
+                                required: 1
+                                conditional_logic: 0
+                                wrapper: { width: "50", class: "", id: "" }
+                            -
+                                key: "field_comparison_typical"
+                                label: "Typical Text"
+                                name: "typical_text"
+                                type: "text"
+                                instructions:
+                                required: 1
+                                conditional_logic: 0
+                                wrapper: { width: "50", class: "", id: "" }
