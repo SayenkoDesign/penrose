@@ -1,0 +1,11 @@
+<div class="row column">
+    <h3>{{ panel.heading }}</h3>
+    <div class="content">{{ panel.content }}</div>
+    <div class="row column partners-slider-wrapper">
+        <div class="partners-slider">
+            {% for partner in panel.insurance_partners %}
+                <img src="{{ partner.insurance_logo.sizes.partners }}" alt="">
+            {% endfor %}
+        </div>
+    </div>
+</div>

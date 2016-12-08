@@ -1,0 +1,22 @@
+.insurance {
+  padding: $global-padding*2 0;
+  color: #254e54;
+  h3 {
+    color: $secondary-color;
+  }
+  .content {
+    margin-bottom: $global-margin*2;
+  }
+  .partners-slider-wrapper {
+    @include breakpoint(small only){
+      padding: 0 1rem;
+    }
+  }
+  .slick-slider {
+    width: 92%;
+    .slick-slide {
+      height: auto;
+      margin: 0 rem-calc(25px);
+    }
+  }
+}

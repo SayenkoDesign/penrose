@@ -11,7 +11,58 @@
 @import "panels/hero_video";
 @import "panels/navigation_content";
 @import "panels/comparison_table";
+@import "panels/insurance";
 
 #appointment {
   display: none;
+}
+
+.slick-slider {
+  position: relative;
+  margin: 0 auto;
+  .slick-slide {
+    height: auto;
+  }
+  .slick-arrow {
+    height: auto;
+    width: auto;
+  }
+  .slick-next {
+    @include breakpoint(large) {
+      right:rem-calc(-45px);
+    }
+    &:before {
+      content: "\f105";
+      font-family: FontAwesome;
+      font-style: normal;
+      font-size: rem-calc(45px);
+      color: $primary-color;
+      position: relative;
+      top: rem-calc(-2px);
+      @include breakpoint(large) {
+        font-size: rem-calc(75px);
+      }
+    }
+  }
+  .slick-prev {
+    @include breakpoint(large) {
+      left: rem-calc(-45px);
+    }
+    &:before {
+      content: "\f104";
+      font-family: FontAwesome;
+      font-style: normal;
+      font-size: rem-calc(45px);
+      color: $primary-color;
+      position: relative;
+      top: rem-calc(-2px);
+      @include breakpoint(large) {
+        font-size: rem-calc(75px);
+      }
+    }
+  }
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: rem-calc(9px);
 }

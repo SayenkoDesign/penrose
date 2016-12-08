@@ -22,6 +22,7 @@ parameters:
   wordpress.translations: "%template_dir%/languages"
   wordpress.image_sizes:
     fullscreen: [1920, 1080, true]
+    partners: [9999, 80, false]
   wordpress.menus:
     primary_menu: "Primary Menu"
   wordpress.sidebars:
@@ -29,7 +30,9 @@ parameters:
   wordpress.styles:
     - { id: "fonts", source: "https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Open+Sans:400,400i,700,700i", deps: ~ }
     - { id: "fancybox", source: "%template_uri%/web/libs/fancybox/source/jquery.fancybox.css", deps: ~ }
-    - { id: "app", source: "%template_uri%/web/stylesheets/app.css", deps: ['fonts', 'fancybox'] }
+    - { id: "slick", source: "%template_uri%/web/stylesheets/slick.css", deps: ~ }
+    - { id: "slick-theme", source: "%template_uri%/web/stylesheets/slick-theme.css", deps: ["slick"] }
+    - { id: "app", source: "%template_uri%/web/stylesheets/app.css", deps: ['fonts', 'fancybox', 'slick-theme'] }
   wordpress.scripts:
     - { id: "app", source: "%template_uri%/web/scripts-min/app.min.js", deps: ~, header: false }
 

@@ -274,3 +274,67 @@ fields:
                                 required: 1
                                 conditional_logic: 0
                                 wrapper: { width: "50", class: "", id: "" }
+            -
+                key: "layout_insurance"
+                name: "insurance"
+                label: "Insurance"
+                instructions: "List commonly accepted insurance providers in a slider"
+                display: "block"
+                sub_fields:
+                    -
+                        key: "field_ubsurance_heading"
+                        label: "Heading"
+                        name: "heading"
+                        type: "text"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "", class: "", id: "" }
+                    -
+                        key: "field_ubsurance_content"
+                        label: "Content"
+                        name: "content"
+                        type: "wysiwyg"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "", class: "", id: "" }
+                        default_value:
+                        tabs: "all"
+                        toolbar: "basic"
+                        media_upload: 0
+                    -
+                        key: "field_insurance_partners"
+                        label: "Insurance"
+                        name: "insurance_partners"
+                        type: "repeater"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "", class: "", id: "" }
+                        collapsed:
+                        min: 5
+                        max: 0
+                        layout: "block"
+                        button_label: "Add Row"
+                        sub_fields:
+                            -
+                                key: "field_insurance_logo"
+                                label: "Logo"
+                                name: "insurance_logo"
+                                type: "image"
+                                instructions:
+                                required: 1
+                                conditional_logic: 0
+                                wrapper: { width: "50", class: "", id: "" }
+                                default_value:
+                                return_format:  "array"
+                                preview_size:  "thumbnail"
+                                library:  "all"
+                                min_width:  ""
+                                min_height:  ""
+                                min_size:  ""
+                                max_width:  ""
+                                max_height:  ""
+                                max_size:  ""
+                                mime_types:  ""
