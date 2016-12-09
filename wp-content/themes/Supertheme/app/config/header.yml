@@ -5,6 +5,8 @@ location:
     - { param: "post_type", operator: "==", value: "post" }
   -
     - { param: "post_type", operator: "==", value: "page" }
+  -
+    - { param: "post_type", operator: "==", value: "case_study" }
 menu_order: 1
 position: "side"
 style: "default"
@@ -32,7 +34,7 @@ fields:
     key:  "field_background"
     label:  "Background"
     name:  "header_background"
-    type:  "file"
+    type:  "image"
     return_format: "array"
     instructions:  "Defaults theme settings image."
     required:  0,
