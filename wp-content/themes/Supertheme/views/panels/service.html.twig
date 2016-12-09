@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="small-12 medium-6 large-5 columns left">
+        <h2>{{ panel.heading }}</h2>
+        <div class="content">{{ panel.content }}</div>
+    </div>
+    <div class="small-12 medium-6 large-7 columns right">
+        <div class="video">
+            <img src="{{ panel.video_image.url }}" alt="">
+            <div class="content">
+                <a href="{{ panel.video }}" class="fa fa-play fancybox-media"></a>
+                <h2>{{ panel.video_heading }}</h2>
+            </div>
+        </div>
+    </div>
+</div>

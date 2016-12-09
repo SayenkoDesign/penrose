@@ -1,0 +1,43 @@
+.service {
+  padding: $global-padding*3 0;
+  .left {
+    h2 {
+      color: $secondary-color;
+    }
+    .content {
+      font-size: rem-calc(14px);
+      color: $dark-gray;
+    }
+  }
+  .right {
+    h2 {
+      color: $white;
+      @include breakpoint(medium only) {
+        font-size: rem-calc(26px);
+      }
+    }
+    .video {
+      position: relative;
+    }
+    .content {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: $global-padding;
+      right: $global-padding;
+      text-align: center;
+      margin: 0 auto;
+      max-width: 400px;
+    }
+    .fa {
+      font-size: 0;
+      display: inline-block;
+      width: rem-calc(70px);
+      height: rem-calc(71px);
+      background-image: url("../images-min/service-video-icon.min.png");
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

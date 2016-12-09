@@ -282,7 +282,7 @@ fields:
                 display: "block"
                 sub_fields:
                     -
-                        key: "field_ubsurance_heading"
+                        key: "field_insurance_heading"
                         label: "Heading"
                         name: "heading"
                         type: "text"
@@ -291,7 +291,7 @@ fields:
                         conditional_logic: 0
                         wrapper: { width: "", class: "", id: "" }
                     -
-                        key: "field_ubsurance_content"
+                        key: "field_insurance_content"
                         label: "Content"
                         name: "content"
                         type: "wysiwyg"
@@ -338,3 +338,59 @@ fields:
                                 max_height:  ""
                                 max_size:  ""
                                 mime_types:  ""
+            -
+                key: "layout_service"
+                name: "service"
+                label: "Service"
+                instructions: "content on left side and video on right side"
+                display: "block"
+                sub_fields:
+                    -
+                        key: "field_service_heading"
+                        label: "Heading"
+                        name: "heading"
+                        type: "text"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "50", class: "", id: "" }
+                    -
+                        key: "field_service_content"
+                        label: "Content"
+                        name: "content"
+                        type: "wysiwyg"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "50", class: "", id: "" }
+                        default_value:
+                        tabs: "all"
+                        toolbar: "basic"
+                        media_upload: 0
+                    -
+                        key: "field_service_video_heading"
+                        label: "Video Heading"
+                        name: "video_heading"
+                        type: "text"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "33", class: "", id: "" }
+                    -
+                        key: "field_service_video"
+                        label: "Video URL"
+                        name: "video"
+                        type: "url"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "33", class: "", id: "" }
+                    -
+                        key: "field_service_video_image"
+                        label: "Video Image"
+                        name: "video_image"
+                        type: "image"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "33", class: "", id: "" }
