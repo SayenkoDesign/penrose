@@ -19,6 +19,13 @@ parameters:
   wordpress.theme_support:
     - "html5"
     - "post-thumbnails"
+  wordpress.post_types:
+      case_study:
+          public: true
+          labels: {name: "Case Studies", singular_name: "Case Study"}
+          menu_position: 6
+          menu_icon: "dashicons-portfolio"
+          supports: ["title", "editor", "thumbnail"]
   wordpress.translations: "%template_dir%/languages"
   wordpress.image_sizes:
     fullscreen: [1920, 1080, true]

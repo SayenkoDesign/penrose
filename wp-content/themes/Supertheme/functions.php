@@ -34,4 +34,7 @@ if(function_exists('acf_add_local_field_group')){
     // page builder
     $fields = $parser->parse(file_get_contents(__DIR__.'/app/config/page_builder.yml'));
     acf_add_local_field_group($fields);
+    // case studies
+    $fields = $parser->parse(file_get_contents(__DIR__.'/app/config/case_study.yml'));
+    acf_add_local_field_group($fields);
 }
