@@ -394,3 +394,78 @@ fields:
                         required: 1
                         conditional_logic: 0
                         wrapper: { width: "33", class: "", id: "" }
+            -
+                key: "layout_accordion"
+                name: "accordion"
+                label: "Accordion"
+                instructions: "content on left and accordion on right"
+                display: "block"
+                sub_fields:
+                    -
+                        key: "field_accordion_left_heading"
+                        label: "Left Heading"
+                        name: "left_heading"
+                        type: "text"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "50", class: "", id: "" }
+                    -
+                        key: "field_accordion_left_content"
+                        label: "Content"
+                        name: "content"
+                        type: "wysiwyg"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "50", class: "", id: "" }
+                        default_value:
+                        tabs: "all"
+                        toolbar: "basic"
+                        media_upload: 0
+                    -
+                        key: "field_accordion_right_heading"
+                        label: "Right Heading"
+                        name: "right_heading"
+                        type: "text"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "", class: "", id: "" }
+                    -
+                        key: "field_accordion"
+                        label: "Accordion"
+                        name: "accordion"
+                        type: "repeater"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "", class: "", id: "" }
+                        collapsed:
+                        min: 2
+                        max: 0
+                        layout: "block"
+                        button_label: "Add Row"
+                        sub_fields:
+                            -
+                                key: "field_accordion_heading"
+                                label: "Heading"
+                                name: "accordion_heading"
+                                type: "text"
+                                instructions:
+                                required: 1
+                                conditional_logic: 0
+                                wrapper: { width: "50", class: "", id: "" }
+                            -
+                                key: "field_accordion_content"
+                                label: "Content"
+                                name: "accordion_content"
+                                type: "wysiwyg"
+                                instructions:
+                                required: 1
+                                conditional_logic: 0
+                                wrapper: { width: "50", class: "", id: "" }
+                                default_value:
+                                tabs: "all"
+                                toolbar: "basic"
+                                media_upload: 0

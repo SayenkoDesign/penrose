@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="small-12 large-6 columns">
+        <h3>{{ panel.left_heading }}</h3>
+        <div class="content">
+            {{ panel.content }}
+        </div>
+    </div>
+    <div class="small-12 large-6 columns">
+        <h3>{{ panel.right_heading }}</h3>
+        <ul class="accordion" data-accordion>
+            {% for item in panel.accordion %}
+                <li class="accordion-item" data-accordion-item data-allow-all-closed="true">
+                    <a href="#" class="accordion-title">{{ item.accordion_heading }}</a>
+                    <div class="accordion-content" data-tab-content>
+                        {{ item.accordion_content }}
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

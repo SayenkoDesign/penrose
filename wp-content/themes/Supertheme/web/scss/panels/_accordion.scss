@@ -1,0 +1,28 @@
+section.accordion {
+  background-color: $light-gray;
+  color: $dark-gray;
+  padding: $global-padding*3 0;
+  h3 {
+    color: $secondary-color;
+    &::after {
+      content: " ";
+      display: block;
+      height: rem-calc(2px);
+      width: $global-padding*5;
+      background-color: $primary-color;
+      margin: $global-margin*0.6 0 $global-margin;
+    }
+  }
+  .accordion-title {
+    font-size: rem-calc(18px);
+    padding: $global-padding;
+    &:before {
+      font-weight: bold;
+    }
+  }
+  .accordion {
+    a:hover, a:focus, .is-active {
+      color: $white;
+    }
+  }
+}
