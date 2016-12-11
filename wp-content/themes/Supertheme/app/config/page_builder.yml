@@ -469,3 +469,105 @@ fields:
                                 tabs: "all"
                                 toolbar: "basic"
                                 media_upload: 0
+            -
+                key: "layout_team"
+                name: "team"
+                label: "Team"
+                instructions: "List of employees"
+                display: "block"
+                sub_fields:
+                    -
+                        key: "field_team_heading"
+                        label: "Heading"
+                        name: "heading"
+                        type: "text"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "", class: "", id: "" }
+                    -
+                        key: "field_members"
+                        label: "Members"
+                        name: "members"
+                        type: "repeater"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "", class: "", id: "" }
+                        collapsed:
+                        min: 2
+                        max: 0
+                        layout: "block"
+                        button_label: "Add Row"
+                        sub_fields:
+                            -
+                                key: "field_team_image"
+                                label: "Image"
+                                name: "image"
+                                type: "image"
+                                instructions:
+                                required: 1
+                                conditional_logic: 0
+                                wrapper: { width: "", class: "", id: "" }
+                            -
+                                key: "field_team_first_name"
+                                label: "First Name"
+                                name: "first_name"
+                                type: "text"
+                                instructions:
+                                required: 1
+                                conditional_logic: 0
+                                wrapper: { width: "50", class: "", id: "" }
+                            -
+                                key: "field_team_last_name"
+                                label: "Last Name"
+                                name: "last_name"
+                                type: "text"
+                                instructions:
+                                required: 1
+                                conditional_logic: 0
+                                wrapper: { width: "50", class: "", id: "" }
+                            -
+                                key: "field_team_position"
+                                label: "Position"
+                                name: "position"
+                                type: "text"
+                                instructions:
+                                required: 1
+                                conditional_logic: 0
+                                wrapper: { width: "50", class: "", id: "" }
+                            -
+                                key: "field_team_email"
+                                label: "Email"
+                                name: "email"
+                                type: "email"
+                                instructions:
+                                required: 1
+                                conditional_logic: 0
+                                wrapper: { width: "50", class: "", id: "" }
+                            -
+                                key: "field_team_professional"
+                                label: "Professional Bio"
+                                name: "professional_bio"
+                                type: "wysiwyg"
+                                instructions:
+                                required: 1
+                                conditional_logic: 0
+                                wrapper: { width: "50", class: "", id: "" }
+                                default_value:
+                                tabs: "all"
+                                toolbar: "basic"
+                                media_upload: 0
+                            -
+                                key: "field_team_personal"
+                                label: "Personal Bio"
+                                name: "personal_bio"
+                                type: "wysiwyg"
+                                instructions:
+                                required: 1
+                                conditional_logic: 0
+                                wrapper: { width: "50", class: "", id: "" }
+                                default_value:
+                                tabs: "all"
+                                toolbar: "basic"
+                                media_upload: 0

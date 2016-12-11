@@ -1,0 +1,63 @@
+.team {
+  padding: $global-padding*2 0;
+  h3 {
+    text-align: center;
+    color: $secondary-color;
+    &::after {
+      content: " ";
+      display: block;
+      height: rem-calc(2px);
+      width: $global-padding*5;
+      background-color: $primary-color;
+      margin: $global-margin*0.6 auto $global-margin;
+    }
+  }
+  .member {
+    text-align: center;
+    .profile img {
+      border: 4px solid $medium-gray;
+      border-radius: 100%;
+      margin-bottom: $global-margin;
+    }
+    h4 {
+      color: $primary-color;
+    }
+    h6 {
+      color: #254e54;
+    }
+  }
+}
+.member-lightbox {
+  display: none;
+  color: $dark-gray;
+  .large-4 {
+    text-align: center;
+  }
+  a {
+    display: block;
+  }
+  img {
+    border: 4px solid $medium-gray;
+    border-radius: 100%;
+    margin-bottom: $global-margin;
+  }
+  h3 {
+    color: $secondary-color;
+    margin: 0;
+  }
+  h6 {
+    color: #254e54;
+    &::after {
+      content: " ";
+      display: block;
+      height: rem-calc(2px);
+      width: $global-padding*5;
+      background-color: $primary-color;
+      margin: $global-margin*0.6 0 $global-margin;
+    }
+  }
+  h5 {
+    color: $secondary-color;
+    margin: 0;
+  }
+}
