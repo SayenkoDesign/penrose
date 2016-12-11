@@ -1,12 +1,9 @@
 jQuery(function() {
     jQuery(document).foundation();
     jQuery('.fancybox').fancybox({
-        helpers: {
-            media : {},
-            overlay: {
-                locked: false
-            }
-        }
+        maxWidth: 750,
+        scrolling: "no",
+        fitToView: false
     });
     jQuery('.fancybox-media').fancybox({
         openEffect  : 'none',

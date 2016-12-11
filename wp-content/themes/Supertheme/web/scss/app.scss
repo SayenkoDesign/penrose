@@ -20,6 +20,39 @@
   display: none;
 }
 
+
+// lightbox
+.fancybox-close {
+  background-image: url('../images-min/close-icon.min.png');
+  background-size: 100%;
+  top: -60px;
+  right: 0;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.fancybox-wrap {
+  top: 116px !important;
+  @media screen and (max-width: 800px) {
+    width: calc(100% - 40px) !important;
+  }
+}
+.fancybox-skin {
+  border-radius: 0;
+  background-image: url("../images-min/lightbox-bar.min.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
+  padding-top: $global-padding*3 !important;
+}
+.fancybox-inner {
+  @media screen and (max-width: 800px) {
+    width: 100% !important;
+  }
+}
+
+// slider
 .slick-slider {
   position: relative;
   margin: 0 auto;
