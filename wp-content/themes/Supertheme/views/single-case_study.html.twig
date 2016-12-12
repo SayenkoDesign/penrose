@@ -1,0 +1,38 @@
+{% extends "base.html.twig" %}
+
+{% block header %}
+    {% include 'panels/banner-header.html.twig' with {title: post.get_field('header_heading'), background:  TimberImage(post.get_field('header_background'))}%}
+{% endblock %}
+{% block body %}
+    {% if acf.content_builder is defined and acf.content_builder.value %}
+        {% for panel in acf.content_builder.value %}
+            <section class="panel {{ panel.acf_fc_layout }}">
+                {% include 'panels/'~panel.acf_fc_layout~'.html.twig' with {"panel": panel} %}
+            </section>
+        {% endfor %}
+    {% else %}
+        <div class="row column">
+            <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+                <div class="row">
+                    <div class="small-12 large-8 columns">
+                        <img src="{{ acf.case_image.value.url }}" />
+                        {% for term in post.terms('case_category') %}
+                            <a href="{{ term.link }}" class="primary hollow button">{{ term.name }}</a>
+                        {% endfor %}
+                    </div>
+                    <div class="small-12 large-4 columns">
+                        {% for detail in acf.case_details.value %}
+                            <h4>{{ detail.case_details_title }}</h4>
+                            <div>{{ detail.case_details_content }}</div>
+                        {% endfor %}
+                        <blockquote class="testimony">
+                            <img src="{{ acf.testimonial_logo.value.url }}" />
+                            <div>{{ acf.testimonial_content.value }}</div>
+                            <h5>{{ acf.testimonial_author.value }}</h5>
+                        </blockquote>
+                    </div>
+                </div>
+            </article>
+        </div>
+    {% endif %}
+{% endblock %}

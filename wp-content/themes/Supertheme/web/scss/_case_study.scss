@@ -1,0 +1,59 @@
+.post-type-case_study {
+  padding: $global-padding*2 0;
+  .large-8 {
+    img {
+      margin-bottom: $global-margin;
+    }
+    .hollow.button {
+      display: inline-block;
+      margin: 0 $global-margin $global-margin 0;
+      &:hover {
+        background-color: $primary-color;
+        color: $white;
+      }
+    }
+  }
+  .large-4 {
+    h4 {
+      margin: 0;
+    }
+    div {
+      margin-bottom: $global-margin*2;
+    }
+    blockquote {
+      border: 1px solid $dark-gray;
+      position: relative;
+      text-align: center;
+      padding: $global-padding*2;
+      font-size: rem-calc(20px);
+      color: $dark-gray;
+      text-indent: 2.5rem;
+      &::before {
+        content: " ";
+        display: block;
+        width: 1.75rem;
+        height: 1.25rem;
+        background-image: url("../images-min/quote.min.png");
+        position: relative;
+        top: 1.5rem;
+      }
+      img {
+        position: absolute;
+        max-height: 50px;
+        max-width: 50px;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 100%;
+      }
+      h5 {
+        color: $primary-color;
+        text-indent: 0;
+        &::before {
+          content: '\2014 \0020';
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}

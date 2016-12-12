@@ -38,3 +38,15 @@ if(function_exists('acf_add_local_field_group')){
     $fields = $parser->parse(file_get_contents(__DIR__.'/app/config/case_study.yml'));
     acf_add_local_field_group($fields);
 }
+
+register_taxonomy('case_category', 'case_study', [
+    'hierarchical'          => false,
+    'labels'                => [
+        'name'                       => _x( 'Categories', 'taxonomy general name', 'textdomain' ),
+        'singular_name'              => _x( 'Category', 'taxonomy singular name', 'textdomain' ),
+    ],
+    'show_ui'               => true,
+    'show_admin_column'     => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var'             => true,
+]);
