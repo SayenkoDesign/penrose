@@ -1,0 +1,18 @@
+<div class="reviews-slider">
+    {% for case in panel.cases %}
+        <div class="case">
+            <a href="{{ function('get_permalink', case.case.ID) }}">
+                {{ function("get_the_post_thumbnail", case.case.ID) }}
+                <div class="row column">
+                    <img src="{{ TimberImage(case.case.testimonial_logo).src }}" class="logo"/>
+                    <blockquote>
+                        {{ case.case.testimonial_content }}
+                    </blockquote>
+                    <cite>
+                        {{ case.case.testimonial_author }}
+                    </cite>
+                </div>
+            </a>
+        </div>
+    {% endfor %}
+</div>

@@ -571,3 +571,39 @@ fields:
                                 tabs: "all"
                                 toolbar: "basic"
                                 media_upload: 0
+            -
+                key: "layout_cases"
+                name: "cases"
+                label: "Case Studies"
+                instructions: "Slider of case study testimonials"
+                display: "block"
+                sub_fields:
+                    -
+                        key: "field_cases"
+                        label: "Case Studies"
+                        name: "cases"
+                        type: "repeater"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "", class: "", id: "" }
+                        collapsed:
+                        min: 2
+                        max: 0
+                        layout: "block"
+                        button_label: "Add Row"
+                        sub_fields:
+                        -
+                            key: "field_case"
+                            label: "Case"
+                            name: "case"
+                            type: "post_object"
+                            instructions:
+                            required: 1
+                            conditional_logic: 0
+                            wrapper: { width: "", class: "", id: "" }
+                            post_type: "case_study"
+                            taxonomy: ""
+                            allow_null: 0
+                            multiple: 0
+                            return_format: "object"

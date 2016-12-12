@@ -1,0 +1,117 @@
+.cases {
+  text-align: center;
+  .case {
+    position: relative;
+  }
+  .attachment-post-thumbnail {
+    position: absolute;
+    top: 0;
+    left:0;
+    max-width: none;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  .row {
+    position: relative;
+    z-index: 1;
+    padding-top: $global-padding*4;
+    padding-bottom: $global-padding*8;
+  }
+  .logo {
+    max-width: rem-calc(200px);
+    margin: 0 auto $global-margin auto;
+  }
+  blockquote {
+    color: $white;
+    border: none;
+    padding: 0;
+    font-size: rem-calc(18px);
+    @include breakpoint(large) {
+      font-size: rem-calc(26px);
+    }
+    &:before {
+      content: " ";
+      display: block;
+      width: 1.75rem;
+      height: 1.25rem;
+      background-image: url("../images-min/quote.min.png");
+      position: relative;
+      margin-right: $global-padding/2;
+      float: left;
+    }
+  }
+  cite {
+    color: $primary-color;
+    font-size: rem-calc(16px);
+    @include breakpoint(large) {
+      font-size: rem-calc(24px);
+    }
+    &::before {
+      content: "\007E";
+    }
+  }
+
+  .slick-dotted.slick-slider {
+    margin-bottom: 0;
+  }
+  .sick-arrow {
+    display: none;
+  }
+  .slick-dots {
+    bottom: rem-calc(56px);
+    display: block;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+
+    li {
+      position: relative;
+      display: inline-block;
+      width: rem-calc(32px);
+      height: rem-calc(8px);
+      margin: 0 rem-calc(5px);
+      padding: 0;
+      cursor: pointer;
+    }
+
+    li button {
+      border: 0;
+      background: transparent;
+      display: block;
+      width: rem-calc(32px);
+      height: rem-calc(8px);
+      outline: none;
+      line-height: 0;
+      font-size: 0;
+      color: transparent;
+      padding: rem-calc(5px);
+      cursor: pointer;
+    }
+
+    li button:hover:before,
+    li button:focus:before {
+      opacity: .6;
+    }
+
+    li button:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: rem-calc(32px);
+      height: rem-calc(8px);
+      font-size: 0;
+      text-align: center;
+      background-color: $white;
+      opacity: 0.25;
+    }
+
+    li.slick-active button:before {
+      color: $white;
+      opacity: 1;
+    }
+
+    li.alick-active button:hover:before {
+      opacity: 1;
+    }
+  }
+}

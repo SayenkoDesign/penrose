@@ -27,4 +27,10 @@ jQuery(function() {
             }
         }]
     });
+    jQuery('.reviews-slider').slick({
+        slidesToShow: 1,
+        dots: true,
+        arrows: false,
+        adaptiveHeight: true
+    });
 });
