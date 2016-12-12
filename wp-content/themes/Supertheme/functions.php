@@ -42,8 +42,8 @@ if(function_exists('acf_add_local_field_group')){
 register_taxonomy('case_category', 'case_study', [
     'hierarchical'          => false,
     'labels'                => [
-        'name'                       => _x( 'Categories', 'taxonomy general name', 'textdomain' ),
-        'singular_name'              => _x( 'Category', 'taxonomy singular name', 'textdomain' ),
+        'name'              => _x( 'Categories', 'taxonomy general name', 'textdomain' ),
+        'singular_name'     => _x( 'Category', 'taxonomy singular name', 'textdomain' ),
     ],
     'show_ui'               => true,
     'show_admin_column'     => true,

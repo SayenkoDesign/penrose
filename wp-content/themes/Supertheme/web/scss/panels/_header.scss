@@ -1,5 +1,7 @@
 .sticky {
   background-color: $body-background;
+  width: 100% !important;
+  max-width: none !important;
   .top {
     background-color: $light-gray;
     font-size: rem-calc(18px);

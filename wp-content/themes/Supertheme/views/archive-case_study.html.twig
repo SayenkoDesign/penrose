@@ -1,0 +1,61 @@
+{% extends "base.html.twig" %}
+{% block header %}
+    {% include 'panels/banner-header.html.twig' with {title: title, background:  TimberImage(post.get_field('header_background'))}%}
+{% endblock %}
+{% block body %}
+    <section class="archive archive-case_study ">
+        <div class="gradient"></div>
+        <div class="categories">
+            <ul class="horizontal menu align-center">
+                {% for category in categories %}
+                    <li><a href="{{ category.link }}" {% if category.id == current_category %}class="active"{% endif %}>{{ category.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="row content-wrapper">
+            <div class="small row">
+                <div class="small-12 columns">
+                    {% for post in posts %}
+                        {% if loop.index % 3 == 1 %}
+                            <div class="case_study-teaser">
+                                <a href="{{ post.link }}">
+                                    {{ function("get_the_post_thumbnail", post.ID) }}
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="large row">
+                <div class="medium-4 columns">
+                    {% for post in posts %}
+                        {% if loop.index % 3 == 1 %}
+                            <div class="case_study-teaser">
+                                <a href="{{ post.link }}">{{ function("get_the_post_thumbnail", post.ID) }}
+                                    <h2>{{ post.title }}</h2></a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="medium-4 columns">
+                    {% for post in posts %}
+                        {% if loop.index % 3 == 2 %}
+                            <div class="case_study-teaser">
+                                <a href="{{ post.link }}">{{ function("get_the_post_thumbnail", post.ID) }}</a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="medium-4 columns">
+                    {% for post in posts %}
+                        {% if loop.index % 3 == 0 %}
+                            <div class="case_study-teaser">
+                                <a href="{{ post.link }}">{{ function("get_the_post_thumbnail", post.ID) }}</a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
