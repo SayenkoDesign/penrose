@@ -9,4 +9,8 @@ $context = Timber::get_context();
 $post = new Post();
 $context['post'] = $post;
 $context["acf"] = get_field_objects($context["post"]->ID);
-$timber::render(['page-'.$post->post_name.'.twig', 'page.html.twig'], $context);
+$templates = ['page-'.$post->post_name.'.twig', 'page.html.twig'];
+if ( is_front_page() ) {
+    array_unshift($templates, 'home.html.twig');
+}
+$timber::render($templates, $context);
