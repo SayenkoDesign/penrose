@@ -32,10 +32,10 @@
         color: $anchor-color-hover;
       }
     }
-    ul.align-right > li:first-of-type a {
+    ul.align-right > li:first-of-type > a {
       padding-left: 0;
     }
-    ul.align-right > li:last-of-type a {
+    ul.align-right > li:last-of-type > a {
       padding-right: 0;
     }
     .dropdown.menu > li.is-dropdown-submenu-parent > a {

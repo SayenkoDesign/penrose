@@ -10,34 +10,48 @@
   }
   th {
     color: $white;
-    font-size: rem-calc(20px);
     font-weight: normal;
     text-transform: uppercase;
     position: relative;
-    padding: rem-calc(15px);
     background-color: $primary-color;
     border-width: 0;
+    font-size: rem-calc(12px);
+    padding: rem-calc(8px);
+    @include breakpoint(medium) {
+      font-size: rem-calc(20px);
+      padding: rem-calc(20px);
+    }
     &:first-of-type {
     }
     &:nth-child(2) {
       text-align: center;
+      @include breakpoint(medium) {
+        padding-right: rem-calc(60px);
+      }
     }
     &:last-of-type {
       background-color: #254e54;
-      padding-left: rem-calc(58px);
+      text-align: center;
+      @include breakpoint(medium) {
+        text-align: left;
+        padding-left: rem-calc(64px);
+      }
     }
   }
   tr {
     td {
       padding: rem-calc(8px);
-      @include breakpoint(321px) {
+      @include breakpoint(medium) {
         padding: rem-calc(16px);
       }
     }
     td:nth-child(1) {
       border-right: 1px $dark-gray solid;
       text-align: left;
-      font-size: rem-calc(24px);
+      font-size: rem-calc(12px);
+      @include breakpoint(medium) {
+        font-size: rem-calc(24px);
+      }
     }
     td:nth-child(2) {
       text-align: center;
