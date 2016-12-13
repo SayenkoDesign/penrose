@@ -25,6 +25,19 @@
       &:hover {
         background-color: scale_color($primary-color, $lightness: -14%);
       }
+      &.phone, &.places, &.fancybox {
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+      &.phone {
+        background-image: url("../images-min/footer-phone-icon.min.png");
+      }
+      &.places {
+        background-image: url("../images-min/footer-place-icon.min.png");
+      }
+      &.fancybox {
+        background-image: url("../images-min/footer-form-icon.min.png");
+      }
     }
     .cta-line-1, .cta-line-2 {
       color: #254e54;
