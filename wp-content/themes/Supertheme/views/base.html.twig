@@ -87,17 +87,18 @@
                 <div class="mobile-menu-bar" data-responsive-toggle="small-menu" data-hide-for="medium">
                     <div class="row">
                         <div class="shrink column">
-                            <a href=""><i class="fa fa-phone"></i></a>
+                            <a href="{{ phone_url }}"><i class="fa fa-phone"></i></a>
                         </div>
                         <div class="expand column text-center">
                             <a href="{{ site.link }}" class="home"><img src="{{ mobile_logo.url }}" alt="{{ site.title }}"></a>
                         </div>
                         <div class="shrink column">
-                            <a href="#" data-toggle><i class="fa fa-bars"></i></a>
+                            <a data-toggle><i class="fa fa-bars"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="mobile-menu hide-for-medium" id="small-menu" data-toggler>
+                    <a href="#appointment" class="fancybox primary button">Schedule an Evaluation</a>
                     {% if menu is defined %}
                         {% include 'menu-accordion.html.twig' %}
                     {% endif %}
