@@ -177,7 +177,10 @@
         </footer>
     {% endblock %}
     {% block appointment %}
-        <div id="appointment"><h1>Appointment form will go here</h1></div>
+        <div id="appointment">
+            <h3>Schedule an Evaluation</h3>
+            {{ function('do_shortcode', '[gravityform id=1 title=false description=false ajax=true tabindex=49]') }}
+        </div>
     {% endblock %}
 
     {% block scripts %}

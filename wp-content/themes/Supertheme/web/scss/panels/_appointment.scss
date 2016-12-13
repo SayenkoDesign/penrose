@@ -1,0 +1,66 @@
+#appointment {
+  display: none;
+  h3 {
+    text-align: center;
+    color: $secondary-color;
+    &::after {
+      content: " ";
+      display: block;
+      height: rem-calc(2px);
+      width: $global-padding*5;
+      background-color: $primary-color;
+      margin: $global-margin*0.6 auto $global-margin*2;
+    }
+  }
+  input[type=text], input[type=email], input[type=phone], input[type=tel], textarea {
+    &::-webkit-input-placeholder {
+      color: $dark-gray;
+      opacity: 1;
+    }
+
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $dark-gray;
+      opacity: 1;
+    }
+
+    &::-moz-placeholder {  /* Firefox 19+ */
+      color: $dark-gray;
+      opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+      color: $dark-gray;
+      opacity: 1;
+    }
+  }
+  select {
+    color: $dark-gray;
+  }
+  input[type=text], input[type=email], input[type=phone], input[type=tel],
+  select, textarea {
+    font-size: rem-calc(14px);
+  }
+  input[type=submit] {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .gform_fields {
+    list-style-type: none;
+    margin: 0;
+  }
+  .gfield_label, .name_first label {
+    display: none;
+  }
+  #field_1_2, #field_1_3 {
+    @include breakpoint(medium) {
+      width: calc(50% - 8px);
+      float: left;
+    }
+  }
+  #field_1_3 {
+    @include breakpoint(medium) {
+      margin-left: 16px;
+    }
+  }
+}

@@ -17,11 +17,7 @@
 @import "panels/accordion";
 @import "panels/team";
 @import "panels/cases";
-
-#appointment {
-  display: none;
-}
-
+@import "panels/appointment";
 
 // lightbox
 .fancybox-close {
