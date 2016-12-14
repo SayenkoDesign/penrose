@@ -36,6 +36,19 @@
   }
 }
 
+.not-found {
+  padding: $global-padding*2 0;
+  @include breakpoint(medium) {
+    padding: $global-padding*6 0;
+  }
+  @include breakpoint(medium) {
+    padding: $global-padding*8 0;
+  }
+  h2 {
+    color: $secondary-color;
+  }
+}
+
 // lightbox
 .fancybox-close {
   background-image: url('../images-min/close-icon.min.png');
