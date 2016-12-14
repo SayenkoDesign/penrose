@@ -22,6 +22,7 @@ parameters:
   wordpress.post_types:
       case_study:
           public: true
+          has_archive: true
           labels: {name: "Case Studies", singular_name: "Case Study"}
           menu_position: 6
           menu_icon: "dashicons-portfolio"
