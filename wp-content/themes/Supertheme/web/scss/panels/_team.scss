@@ -14,10 +14,26 @@
   }
   .member {
     text-align: center;
-    .profile img {
-      border: 4px solid $medium-gray;
-      border-radius: 100%;
-      margin-bottom: $global-margin;
+    margin-bottom: $global-margin*2;
+    .profile {
+      position: relative;
+      display: block;
+      &:hover {
+        img:last-of-type {
+          visibility: visible;
+        }
+      }
+      img {
+        border: 8px solid $medium-gray;
+        border-radius: 100%;
+        margin-bottom: $global-margin;
+        &:last-of-type {
+          position: absolute;
+          top: 0;
+          left: 2px;
+          visibility: hidden;
+        }
+      }
     }
     h4 {
       color: $primary-color;
@@ -38,7 +54,7 @@
     margin-bottom: $global-margin;
   }
   img {
-    border: 4px solid $medium-gray;
+    border: rem-cacl(8px) solid $medium-gray;
     border-radius: 100%;
     margin-bottom: $global-margin;
   }

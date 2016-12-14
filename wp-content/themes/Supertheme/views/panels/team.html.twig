@@ -6,6 +6,7 @@
         <div class="column member">
             <a href="#member_{{ loop.index }}" class="profile fancybox">
                 <img src="{{ member.image.sizes.profile }}" alt="">
+                <img src="{{ member.image_hover.sizes.profile }}" alt="">
             </a>
             <h4>{{ member.first_name }} {{ member.last_name }}</h4>
             <h6>{{ member.position }}</h6>
@@ -14,7 +15,7 @@
         <div id="member_{{ loop.index }}" class="member-lightbox">
             <div class="row">
                 <div class="small-12 large-4 columns">
-                    <img src="{{ member.image.sizes.profile }}" alt="">
+                    <img src="{{ member.image_hover.sizes.profile }}" alt="">
                     <a href="mailto:{{ member.email }}">Email {{ member.first_name }}</a>
                     <a href="#appointment" class="fancybox primary button">Schedule an Evaluation</a>
                 </div>

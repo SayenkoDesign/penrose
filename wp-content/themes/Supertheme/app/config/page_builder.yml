@@ -508,7 +508,16 @@ fields:
                                 instructions:
                                 required: 1
                                 conditional_logic: 0
-                                wrapper: { width: "", class: "", id: "" }
+                                wrapper: { width: "50", class: "", id: "" }
+                            -
+                                key: "field_team_image_hover"
+                                label: "Fun Image"
+                                name: "image_hover"
+                                type: "image"
+                                instructions: "image shown on hover"
+                                required: 1
+                                conditional_logic: 0
+                                wrapper: { width: "50", class: "", id: "" }
                             -
                                 key: "field_team_first_name"
                                 label: "First Name"
