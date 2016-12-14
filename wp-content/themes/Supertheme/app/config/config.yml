@@ -34,7 +34,7 @@ parameters:
   wordpress.menus:
     primary_menu: "Primary Menu"
   wordpress.sidebars:
-    - { id: "sample_sidebar", name: "sample sidebar", description: "sample sidebar managed by config file" }
+    - { id: "sidebar", name: "Sidebar", description: "Sidebar for blogs" }
   wordpress.styles:
     - { id: "fonts", source: "https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Open+Sans:400,400i,700,700i", deps: ~ }
     - { id: "fancybox", source: "%template_uri%/web/libs/fancybox/source/jquery.fancybox.css", deps: ~ }

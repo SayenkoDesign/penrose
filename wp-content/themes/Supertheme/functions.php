@@ -21,6 +21,10 @@ add_filter('timber/context', function($data){
     $data['directions'] = get_field('directions_link', 'option');
     $data['hours'] = get_field('hours', 'option');
     $data['copyright'] = get_field('copyright', 'option');
+    // sidebar
+    ob_start();
+    dynamic_sidebar('sidebar');
+    $data['sidebar'] = ob_get_clean();
 
     return $data;
 });

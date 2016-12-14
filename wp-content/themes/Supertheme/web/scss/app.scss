@@ -19,6 +19,23 @@
 @import "panels/cases";
 @import "panels/appointment";
 
+.archive {
+  .author-bar {
+    display: none;
+    @include breakpoint (large) {
+      display: block;
+    }
+  }
+  .content-wrapper > .large-9{
+    @include breakpoint(large) {
+      padding-right: $global-padding*3 !important;
+    }
+  }
+  .row.post-type-post {
+    margin: 0;
+  }
+}
+
 // lightbox
 .fancybox-close {
   background-image: url('../images-min/close-icon.min.png');
