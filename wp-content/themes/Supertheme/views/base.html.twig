@@ -39,8 +39,8 @@
 <body class="{{ body_class }}">
     {% block navi %}
         <div data-sticky-container>
-            <div class="sticky" data-sticky data-sticky-on="small" data-top-anchor="sticky-start:top" data-margin-top="0" style="width:100%">
-                <div class="large-menu hide-for-small-only">
+            <div class="sticky" data-sticky data-sticky-on="small" data-top-anchor="90" data-margin-top="0" style="width:100%">
+                <div class="large-menu">
                     <div class="top">
                         <div class="row align-middle">
                             <div class="column">
@@ -76,6 +76,7 @@
                                                         {% endif %}
                                                     </li>
                                                 {% endfor %}
+                                                <li class="schedule"><a href="#appointment" class="fancybox primary button">Schedule an Evaluation</a></li>
                                             </ul>
                                         {% endif %}
                                     {% endif %}
@@ -84,7 +85,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mobile-menu-bar" data-responsive-toggle="small-menu" data-hide-for="medium">
+                <div class="mobile-menu-bar" data-responsive-toggle="small-menu" data-hide-for="large">
                     <div class="row">
                         <div class="shrink column">
                             <a href="{{ phone_url }}"><i class="fa fa-phone"></i></a>
@@ -97,7 +98,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="mobile-menu hide-for-medium" id="small-menu" data-toggler>
+                <div class="mobile-menu hide-for-large" id="small-menu" data-toggler>
                     <a href="#appointment" class="fancybox primary button">Schedule an Evaluation</a>
                     {% if menu is defined %}
                         {% include 'menu-accordion.html.twig' %}

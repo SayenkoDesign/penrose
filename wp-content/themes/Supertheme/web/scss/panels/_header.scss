@@ -20,7 +20,7 @@
     }
   }
   .bottom {
-    padding: $global-padding 0 $global-padding*3 0;
+    padding: $global-padding/2 0 $global-padding*2 0;
     background-image: url('../images-min/header-bar.min.png');
     background-position: bottom center;
     background-repeat: no-repeat;
@@ -47,6 +47,25 @@
         right: 1rem;
       }
     }
+    .button {
+      color: $white;
+      &:hover {
+        color: $white;
+      }
+    }
+    .schedule {
+      display: none;
+    }
+    .home img {
+      height: rem-calc(48px);
+      width: 100%;
+    }
+  }
+  .large-menu {
+    display: none;
+    @include breakpoint(large){
+      display: block;
+    }
   }
   .mobile-menu-bar {
     padding: $global-padding/2 0;
@@ -60,6 +79,7 @@
   }
   .mobile-menu {
     .primary.button {
+      text-align: left;
       margin: 0;
       width: 100%;
     }
@@ -97,5 +117,25 @@
 .sticky-container {
   @include breakpoint(small only) {
     height: rem-calc(64px) !important;
+  }
+}
+.is-stuck {
+  .top {
+    display: none;
+  }
+  .bottom {
+
+    .home img {
+      height: 32px;
+      width: 100%;
+      transition: height linear 500ms;
+    }
+
+    .schedule {
+       display: flex;
+       a {
+         padding: $button-padding !important;
+       }
+     }
   }
 }

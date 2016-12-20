@@ -19,7 +19,7 @@
 @import "panels/cases";
 @import "panels/appointment";
 
-.archive {
+.archive, .single-post {
   .author-bar {
     display: none;
     @include breakpoint (large) {
@@ -126,7 +126,11 @@
     }
   }
 }
-
 .slick-dotted.slick-slider {
   margin-bottom: rem-calc(9px);
+}
+
+// scroll to top
+.scroll-top {
+  border-radius: 100%;
 }
