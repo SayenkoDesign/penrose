@@ -30,9 +30,3 @@ if(SP.Settings.AnalyticsID) {
         })();
     }
 }
-
-jQuery('.scroll-top').on("click", function(e){
-    jQuery("html, body").animate({ scrollTop: 0 }, "slow");
-    e.preventDefault();
-    return false;
-});

@@ -166,23 +166,14 @@ fields:
                         button_label: Add Row
                         sub_fields:
                             -
-                                key:  "field_navigation_second_link_title"
-                                label:  "text"
-                                name:  "second_title"
-                                type:  "text"
+                                key:  "field_navigation_second_link"
+                                label:  "Page"
+                                name:  "second_link"
+                                type:  "post_object"
                                 instructions:  ""
                                 required:  1,
                                 conditional_logic:  0,
-                                wrapper:  { width:  "50", class:  "", id:  "" }
-                            -
-                                key:  "field_navigation_second_link_link"
-                                label:  "url"
-                                name:  "second_url"
-                                type:  "url"
-                                instructions:  ""
-                                required:  1,
-                                conditional_logic:  0,
-                                wrapper:  { width:  "50", class:  "", id:  "" }
+                                wrapper:  { width:  "", class:  "", id:  "" }
                     -
                         key: "field_nvaigation_third_heading"
                         label: "Third heading"
@@ -208,23 +199,14 @@ fields:
                         button_label: Add Row
                         sub_fields:
                             -
-                                key:  "field_navigation_third_link_title"
-                                label:  "text"
-                                name:  "third_title"
-                                type:  "text"
+                                key:  "field_navigation_third_link"
+                                label:  "Page"
+                                name:  "third_link"
+                                type:  "post_object"
                                 instructions:  ""
                                 required:  1,
                                 conditional_logic:  0,
-                                wrapper:  { width:  "50", class:  "", id:  "" }
-                            -
-                                key:  "field_navigation_third_link_link"
-                                label:  "url"
-                                name:  "third_url"
-                                type:  "url"
-                                instructions:  ""
-                                required:  1,
-                                conditional_logic:  0,
-                                wrapper:  { width:  "50", class:  "", id:  "" }
+                                wrapper:  { width:  "", class:  "", id:  "" }
             -
                 key: "layout_comparison"
                 name: "comparison_table"

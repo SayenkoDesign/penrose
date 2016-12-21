@@ -62,13 +62,16 @@
     color: $secondary-color;
     margin: 0;
   }
+  h5 {
+    font-size: rem-calc(18px);
+  }
   h6 {
     color: #254e54;
     &::after {
       content: " ";
       display: block;
       height: rem-calc(2px);
-      width: $global-padding*5;
+      width: $global-padding*3;
       background-color: $primary-color;
       margin: $global-margin*0.6 0 $global-margin;
     }

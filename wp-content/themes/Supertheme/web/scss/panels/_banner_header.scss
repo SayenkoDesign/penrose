@@ -3,7 +3,19 @@
   text-align: center;
   background-size: cover;
   background-position: center;
+  position: relative;
   h1 {
     color: $white;
+    position: relative;
+    z-index: 1;
+  }
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba($secondary-color, 0.6);
   }
 }

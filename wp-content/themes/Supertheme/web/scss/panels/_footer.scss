@@ -90,19 +90,20 @@
         width: 32px;
         height: 32px;
         position: relative;
+        font-size: rem-calc(21px);
         &:hover {
           background-color: scale_color($dark-gray, $lightness: -14%);
         }
         &::before{
           position: relative;
-          left: -6px;
-          top: -2px;
+          left: -9px;
+          top: -5px;
         }
         &.fa-facebook::before {
-          left: -4px;
+          left: -6px;
         }
         &.fa-google-plus::before {
-          left: -8px;
+          left: -12px;
         }
       }
     }

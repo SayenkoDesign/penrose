@@ -6,7 +6,16 @@
                 {% if item.get_children %}
                     <ul class="menu vertical nested">
                         {% for child in item.get_children %}
-                            <li class="{{child.classes | join(' ')}}"><a href="{{child.get_link}}">{{child.title}}</a></li>
+                            <li class="{{child.classes | join(' ')}}">
+                                <a href="{{child.get_link}}">{{child.title}}</a>
+                                {% if child.get_children %}
+                                    <ul class="menu vertical nested">
+                                        {% for grandchild in item.get_children %}
+                                            <li class="{{grandchild.classes | join(' ')}}"><a href="{{grandchild.get_link}}">{{grandchild.title}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </li>
                         {% endfor %}
                     </ul>
                 {% endif %}

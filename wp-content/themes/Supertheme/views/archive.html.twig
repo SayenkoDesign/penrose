@@ -15,7 +15,7 @@
                                 {{ post.date|date('M Y') }}
                             </div>
                             <div class="author">
-                                <img src="{{ post.get_author.avatar.src }}" />
+                                {{ function('get_avatar', post.get_author.id, 96) }}
                                 <div>Author</div>
                                 <div class="name">
                                     {{ post.get_author.display_name }}

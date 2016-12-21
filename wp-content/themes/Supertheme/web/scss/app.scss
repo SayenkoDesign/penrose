@@ -19,11 +19,20 @@
 @import "panels/cases";
 @import "panels/appointment";
 
+.gform_fields {
+  list-style-type: none;
+  margin: 0 0 $global-margin 0;
+}
+
 .archive, .single-post {
   .author-bar {
     display: none;
     @include breakpoint (large) {
       display: block;
+    }
+    .year {
+      margin-top: rem-calc(10px);
+      font-size: rem-calc(12px);
     }
   }
   .content-wrapper > .large-9{
@@ -53,8 +62,10 @@
 .fancybox-close {
   background-image: url('../images-min/close-icon.min.png');
   background-size: 100%;
-  top: -60px;
+  top: -40px;
   right: 0;
+  width: rem-calc(27px);
+  height: rem-calc(27px);
   &:hover {
     opacity: 0.8;
   }
@@ -72,7 +83,10 @@
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: top center;
-  padding-top: $global-padding*3 !important;
+  padding: $global-padding*3 $global-padding $global-padding $global-padding !important;
+  @include breakpoint(medium) {
+    padding: $global-padding*3 $global-padding*5 $global-padding*5 $global-padding*5 !important;
+  }
 }
 .fancybox-inner {
   @media screen and (max-width: 800px) {
@@ -80,6 +94,16 @@
   }
 }
 
+.fancybox-type-iframe
+{
+  .fancybox-skin {
+    padding: 0 !important;
+    background-image: none;
+  }
+  .fancybox-inner {
+    width: 100% !important;
+  }
+}
 // slider
 .slick-slider {
   position: relative;
@@ -133,4 +157,5 @@
 // scroll to top
 .scroll-top {
   border-radius: 100%;
+  bottom: 3rem;
 }

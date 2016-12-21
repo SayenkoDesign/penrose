@@ -33,4 +33,11 @@ jQuery(function() {
         arrows: false,
         adaptiveHeight: true
     });
+
+    jQuery('.scroll-top').on("click", function (e) {
+        console.log("scrolling to top");
+        jQuery("html, body").animate({scrollTop: 0}, "slow");
+        e.preventDefault();
+        return false;
+    });
 });

@@ -21,9 +21,10 @@ parameters:
     - "post-thumbnails"
   wordpress.post_types:
       case_study:
+          rewrite: {slug: 'success-stories'}
           public: true
           has_archive: true
-          labels: {name: "Case Studies", singular_name: "Case Study"}
+          labels: {name: "Success Stories", singular_name: "Success Story"}
           menu_position: 6
           menu_icon: "dashicons-portfolio"
           supports: ["title", "editor", "thumbnail"]
