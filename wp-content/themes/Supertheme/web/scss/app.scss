@@ -5,6 +5,7 @@
 @import "supertheme";
 
 @import "case_study";
+@import "gforms";
 @import "panels/basic_content";
 @import "panels/banner_header";
 @import "panels/footer";
@@ -18,11 +19,9 @@
 @import "panels/team";
 @import "panels/cases";
 @import "panels/appointment";
-
-.gform_fields {
-  list-style-type: none;
-  margin: 0 0 $global-margin 0;
-}
+@import "panels/left_content";
+@import "panels/right_content";
+@import "panels/center_content";
 
 .archive, .single-post {
   .author-bar {

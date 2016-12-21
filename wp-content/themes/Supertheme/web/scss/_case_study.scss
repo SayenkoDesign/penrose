@@ -102,3 +102,20 @@
     }
   }
 }
+
+.case-logo {
+  text-align: center;
+  position: relative;
+  height: rem-calc(120px*0.5)+$global-padding*2;
+  img {
+    position: absolute;
+    bottom: 100%;
+    transform: translate(-50%, 50%);
+    border-radius: 100%;
+    background-color: $white;
+    border: 1px solid $dark-gray;
+  }
+}
+.case-nav {
+  color: $primary-color;
+}

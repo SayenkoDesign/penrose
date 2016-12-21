@@ -3,6 +3,8 @@ title: "Page Builder"
 location:
   -
     - { param: "post_type", operator: "==", value: "page" }
+  -
+    - { param: "post_type", operator: "==", value: "case_study" }
 menu_order: 0
 position: "acf_after_title"
 style: "default"
@@ -598,3 +600,103 @@ fields:
                             allow_null: 0
                             multiple: 0
                             return_format: "object"
+            -
+                key: "layout_left_content"
+                name: "left_content"
+                label: "Left Content"
+                instructions: "Content on left and image on right"
+                display: "block"
+                sub_fields:
+                    -
+                        key: "field_left_content"
+                        label: "Content"
+                        name: "content"
+                        type: "wysiwyg"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "50", class: "", id: "" }
+                        default_value:
+                        tabs: "all"
+                        toolbar: "full"
+                        media_upload: 1
+                    -
+                        key: "field_right_image"
+                        label: "Image"
+                        name: "image"
+                        type: "image"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "50", class: "", id: "" }
+                        default_value:
+                        return_format:  "array"
+                        preview_size:  "thumbnail"
+                        library:  "all"
+                        min_width:  ""
+                        min_height:  ""
+                        min_size:  ""
+                        max_width:  ""
+                        max_height:  ""
+                        max_size:  ""
+                        mime_types:  ""
+            -
+                key: "layout_right_content"
+                name: "right_content"
+                label: "Right Content"
+                instructions: "Content on right and image on left"
+                display: "block"
+                sub_fields:
+                    -
+                        key: "field_left_image"
+                        label: "Image"
+                        name: "image"
+                        type: "image"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "50", class: "", id: "" }
+                        default_value:
+                        return_format:  "array"
+                        preview_size:  "thumbnail"
+                        library:  "all"
+                        min_width:  ""
+                        min_height:  ""
+                        min_size:  ""
+                        max_width:  ""
+                        max_height:  ""
+                        max_size:  ""
+                        mime_types:  ""
+                    -
+                        key: "field_right_content"
+                        label: "Content"
+                        name: "content"
+                        type: "wysiwyg"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "50", class: "", id: "" }
+                        default_value:
+                        tabs: "all"
+                        toolbar: "full"
+                        media_upload: 1
+            -
+                key: "layout_center_content"
+                name: "center_content"
+                label: "Center Content"
+                instructions: "Centered content on a grey background"
+                display: "block"
+                sub_fields:
+                    -
+                        key: "field_center_content"
+                        label: "Content"
+                        name: "content"
+                        type: "wysiwyg"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "", class: "", id: "" }
+                        default_value:
+                        tabs: "all"
+                        toolbar: "full"
+                        media_upload: 1

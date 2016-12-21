@@ -17,10 +17,12 @@
                     {{post.content}}
                 </div>
 
-                <div class="share">
-                    <h4>Share</h4>
-                    {% include 'panels/sharethis.html.twig' %}
-                </div>
+                {% block share %}
+                    <div class="share">
+                        <h4>Share</h4>
+                        {% include 'panels/sharethis.html.twig' %}
+                    </div>
+                {% endblock %}
             </article>
         </div>
     {% endif %}

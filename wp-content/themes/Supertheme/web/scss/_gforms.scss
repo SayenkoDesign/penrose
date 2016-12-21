@@ -1,0 +1,40 @@
+.gform_wrapper {
+  .validation_error {
+    color: $alert-color;
+  }
+}
+
+.gfield_visibility_ {
+  display: none;
+}
+.gform_fields {
+  @extend .row;
+  list-style-type: none;
+  margin: 0 0 $global-margin 0;
+}
+.gfield {
+  @extend .small-12;
+  @extend .columns;
+}
+.ginput_complex.has_first_name.no_middle_name.has_last_name {
+  @extend .row;
+  > span {
+    @extend.column;
+    label {
+      margin-top: -1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+.gfield_error {
+  color: $alert-color;
+  [type="text"], [type="password"], [type="date"], [type="datetime"], [type="datetime-local"], [type="month"], [type="week"],
+  [type="email"], [type="number"], [type="search"], [type="tel"], [type="time"], [type="url"], [type="color"], textarea {
+    border-color: $alert-color;
+    color: $alert-color''
+  }
+}
+.validation_message {
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
