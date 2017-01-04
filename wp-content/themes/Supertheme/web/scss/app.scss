@@ -82,9 +82,9 @@
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: top center;
-  padding: $global-padding*3 $global-padding $global-padding $global-padding !important;
+  padding: $global-padding*5 $global-padding $global-padding $global-padding !important;
   @include breakpoint(medium) {
-    padding: $global-padding*3 $global-padding*5 $global-padding*5 $global-padding*5 !important;
+    padding: $global-padding*5 $global-padding*5 $global-padding*5 $global-padding*5 !important;
   }
 }
 .fancybox-inner {
@@ -157,4 +157,55 @@
 .scroll-top {
   border-radius: 100%;
   bottom: 3rem;
+}
+
+//blog changes
+.archive .sidebar {
+  h1, h2, h3, h4, h5, h6 {
+    color: $secondary-color;
+  }
+}
+.post-type-post {
+  color: $dark-gray;
+  h1, h2, h3, h4, h5, h6 {
+    color: $secondary-color;
+  }
+  .share {
+    .st_custom {
+      display: inline-block;
+      background-color: $secondary-color;
+      width: rem-calc(36px);
+      height: rem-calc(32px);
+      text-align: center;
+      &:hover {
+        cursor: pointer;
+        background-color: scale-color($secondary-color, $lightness: 15%);
+      }
+      &::after {
+        font-family: FontAwesome;
+        color: $white;
+        font-size: rem-calc(14px);
+        position: relative;
+        top: rem-calc(4px);
+      }
+    }
+    .st_sharethis_large::after {
+      content: "\f1e0"
+    }
+    .st_facebook_large::after {
+      content: "\f09a ";
+    }
+    .st_twitter_large::after {
+      content: "\f099";
+    }
+    .st_linkedin_large::after {
+      content: "\f0e1";
+    }
+    .st_pinterest_large::after {
+      content: "\f231";
+    }
+    .st_email_large::after {
+      content: "\f003";
+    }
+  }
 }

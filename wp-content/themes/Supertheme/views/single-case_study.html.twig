@@ -2,9 +2,6 @@
 
 {% block header %}
     {% include 'panels/banner-header.html.twig' with {title: post.get_field('header_heading'), background:  TimberImage(post.get_field('header_background'))}%}
-    <div class="case-logo">
-        <img src="{{ acf.testimonial_logo.value.sizes.case_logo }}" />
-    </div>
     <div class="case-nav">
         <div class="row column text-center">
             {% if post.prev %}<a href="{{ post.prev.link }}">&lt; Prev</a>{% endif %}

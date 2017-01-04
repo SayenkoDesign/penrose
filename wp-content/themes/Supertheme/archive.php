@@ -25,7 +25,7 @@ if (is_category()) {
 }
 
 if(get_post_type() == "case_study") {
-    $context['title'] = get_query_var('case_category') ?: 'Case Studies';
+    $context['title'] = get_query_var('case_category') ?: 'Success Stories';
     $context['current_category'] = isset(get_queried_object()->term_id) ? get_queried_object()->term_id : '';
     $context['categories'] = Timber::get_terms('case_category');
 }

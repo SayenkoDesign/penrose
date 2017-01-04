@@ -5,7 +5,7 @@
         <div class="triangle"></div>
     </div>
     <div class="small-12 medium-6 large-4 columns">
-        <h4>{{ panel.first_heading }}</h4>
+        <h4>{{ panel.second_heading }}</h4>
         <ul class="no-bullet">
             {% for link in panel.second_links %}
                 <li><a href="{{ function('get_permalink', link.second_link.ID) }}">{{ link.second_link.post_title }}</a></li>
@@ -13,7 +13,7 @@
         </ul>
     </div>
     <div class="small-12 medium-6 large-4 columns">
-        <h4>{{ panel.first_heading }}</h4>
+        <h4>{{ panel.third_heading }}</h4>
         <ul class="no-bullet">
             <ul class="no-bullet">
                 {% for link in panel.third_links %}

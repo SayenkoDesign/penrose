@@ -56,3 +56,14 @@ register_taxonomy('case_category', 'case_study', [
     'query_var' => true,
 ]);
 
+add_filter( 'dynamic_sidebar_params', function (array $params) {
+
+    // $params will ordinarily be an array of 2 elements, we're only interested in the first element
+    $widget =& $params[0];
+    $widget['before_title'] = '<h4 class="widgettitle">';
+    $widget['after_title'] = '</h4>';
+
+    return $params;
+
+}, 20 );
+

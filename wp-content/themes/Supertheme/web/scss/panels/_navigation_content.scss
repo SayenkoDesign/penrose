@@ -17,8 +17,8 @@
   h3::after {
     content: " ";
     display: block;
-    height: rem-calc(2px);
-    width: $global-padding*5;
+    height: 2px;
+    width: $global-padding*2.5;
     background-color: $primary-color;
     margin: $global-margin*0.6 0 $global-margin;
   }

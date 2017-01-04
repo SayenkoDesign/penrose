@@ -83,7 +83,7 @@
     }
     .home img {
       height: rem-calc(48px);
-      width: 100%;
+      width: auto;
     }
   }
   .large-menu {
@@ -107,6 +107,8 @@
       background-image: url('../images-min/mobile-menu.min.jpg');
       width: 38px;
       height: 34px;
+      position: relative;
+      top: rem-calc(6px);
     }
   }
   .mobile-menu {
@@ -157,7 +159,7 @@
   }
   .bottom {
     .home img {
-      height: rem-calc(32px);
+      height: rem-calc(44px);
       width: auto;
       max-width: none;
       max-height: none;

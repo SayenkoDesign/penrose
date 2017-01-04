@@ -6,8 +6,8 @@
     &::after {
       content: " ";
       display: block;
-      height: rem-calc(2px);
-      width: $global-padding*5;
+      height: 2px;
+      width: $global-padding*2.5;
       background-color: $primary-color;
       margin: $global-margin*0.6 auto $global-margin*2;
     }
@@ -41,26 +41,13 @@
     font-size: rem-calc(14px);
   }
   input[type=submit] {
+    margin-left: rem-calc(15px);
+    margin-right: rem-calc(15px);
     display: block;
     width: 100%;
     text-align: center;
   }
-  .gform_fields {
-    list-style-type: none;
-    margin: 0;
-  }
   .gfield_label, .name_first label {
     display: none;
-  }
-  #field_1_2, #field_1_3 {
-    @include breakpoint(medium) {
-      width: calc(50% - 8px);
-      float: left;
-    }
-  }
-  #field_1_3 {
-    @include breakpoint(medium) {
-      margin-left: 16px;
-    }
   }
 }

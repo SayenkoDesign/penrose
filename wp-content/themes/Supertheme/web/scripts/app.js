@@ -1,7 +1,7 @@
 jQuery(function() {
     jQuery(document).foundation();
     jQuery('.fancybox').fancybox({
-        maxWidth: 750,
+        maxWidth: 420,
         scrolling: "no",
         fitToView: false
     });
@@ -39,5 +39,13 @@ jQuery(function() {
         jQuery("html, body").animate({scrollTop: 0}, "slow");
         e.preventDefault();
         return false;
+    });
+    jQuery('.insurance > a').on("click", function (e) {
+        console.log("scrolling to insurance section");
+        if(jQuery("#insurance").length) {
+            jQuery("html, body").animate({scrollTop: jQuery('#insurance').offset().top - 160}, "slow");
+            e.preventDefault();
+            return false;
+        }
     });
 });
