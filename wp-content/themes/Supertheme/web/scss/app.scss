@@ -84,7 +84,7 @@
   background-position: top center;
   padding: $global-padding*5 $global-padding $global-padding $global-padding !important;
   @include breakpoint(medium) {
-    padding: $global-padding*5 $global-padding*5 $global-padding*5 $global-padding*5 !important;
+    padding: $global-padding*2 !important;
   }
 }
 .fancybox-inner {
@@ -184,9 +184,9 @@
       &::after {
         font-family: FontAwesome;
         color: $white;
-        font-size: rem-calc(14px);
+        font-size: rem-calc(19px);
         position: relative;
-        top: rem-calc(4px);
+        top: rem-calc(2px);
       }
     }
     .st_sharethis_large::after {
@@ -208,4 +208,47 @@
       content: "\f003";
     }
   }
+}
+
+// sachins changes that havent been cleaned up yet
+@media screen and (min-width: 43.75em) {
+  .fancybox-wrap {
+    width: 700px !important;
+  }
+
+  .fancybox-inner {
+    width: 650px !important;
+  }
+
+  .case_study-teaser {
+    margin-bottom: 28px;
+  }
+
+  .archive-case_study .content-wrapper a h2 {
+    font-size: 1.55rem !important;
+  }
+
+  @media screen and (min-width: 75em) {
+    .sticky .mobile-menu-bar {
+      display: none !important;
+    }
+
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width:1199px){
+  .sticky-container {
+    height: 64px !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width:1024px){
+  .sticky-container {
+    height: 64px !important;
+  }
+}
+.single-case_study .panel cite {
+  display: none;
+}
+.post-type-post {
+  color: #7c7c7c;
 }

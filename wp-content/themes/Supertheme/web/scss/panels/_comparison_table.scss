@@ -33,7 +33,6 @@
       background-color: #254e54;
       text-align: center;
       @include breakpoint(medium) {
-        text-align: left;
         padding-left: rem-calc(64px);
       }
     }

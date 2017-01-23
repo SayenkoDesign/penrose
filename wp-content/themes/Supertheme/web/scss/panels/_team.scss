@@ -17,7 +17,7 @@
     margin-bottom: $global-margin*2;
     .profile {
       position: relative;
-      display: block;
+      display: inline-block;
       &:hover {
         img:last-of-type {
           visibility: visible;

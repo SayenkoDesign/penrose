@@ -3,9 +3,9 @@
     <table>
         <thead>
         <tr>
-            <th>Comparison</th>
+            <th></th>
             <th>Our Approach <div class="vs">VS</div></th>
-            <th>Other Clinics</th>
+            <th>Are Other Clinics?</th>
         </tr>
         </thead>
         <tbody>
@@ -13,9 +13,12 @@
             <tr>
                 <td>{{ row.comparison_text }}</td>
                 <td><i class="fa fa-check-circle"></i></td>
-                <td><i class="fa fa-times-circle"></i><div class="content">{{ row.typical_text }}</div></td>
+                <td><i class="fa fa-question-circle"></i><div class="content">{{ row.typical_text }}</div></td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 </div>
+
+
+

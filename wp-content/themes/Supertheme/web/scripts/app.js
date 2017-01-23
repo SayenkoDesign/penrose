@@ -40,6 +40,7 @@ jQuery(function() {
         e.preventDefault();
         return false;
     });
+    
     jQuery('.insurance > a').on("click", function (e) {
         console.log("scrolling to insurance section");
         if(jQuery("#insurance").length) {

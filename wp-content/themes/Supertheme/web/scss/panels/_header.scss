@@ -1,5 +1,6 @@
 .sticky-container {
   z-index: 10;
+  height: rem-calc(138px) !important;
 }
 .sticky {
   background-color: $body-background;
@@ -11,6 +12,7 @@
     font-size: rem-calc(18px);
     .fa {
       font-size: rem-calc(20px);
+      color: #FF0000;
     }
     .menu {
       a {
