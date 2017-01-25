@@ -1,0 +1,16 @@
+<section class="cases">
+    <div class="reviews-slider">
+        <div class="case">
+            {{ function("get_the_post_thumbnail", post.ID) }}
+            <div class="row column">
+                <img src="{{ TimberImage(post.get_field('testimonial_logo')).src }}" class="logo"/>
+                <blockquote>
+                    {{ post.get_field('testimonial_content') }}
+                </blockquote>
+                <cite>
+                    {{ post.get_field('testimonial_author') }}
+                </cite>
+            </div>
+        </div>
+    </div>
+</section>
