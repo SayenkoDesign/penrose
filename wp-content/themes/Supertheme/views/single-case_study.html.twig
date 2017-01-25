@@ -4,10 +4,22 @@
     {% include 'panels/banner-header.html.twig' with {title: post.get_field('header_heading'), background:  TimberImage(post.get_field('header_background'))}%}
     <div class="case-nav">
         <div class="row column text-center">
-            {% if post.prev %}<a href="{{ post.prev.link }}">&lt; Prev</a>{% endif %}
-            {% if post.prev and post.next %}|{% endif %}
-            {% if post.next %}<a href="{{ post.next.link }}">Next &gt;</a>{% endif %}
+            {% if post.prev %}
+                <a href="{{ post.prev.link }}">&lt; Prev</a>
+            {% else %}
+                <a href="{{ last_post_link }}">&lt; Prev</a>
+            {% endif %}
+            |
+            {% if post.next %}
+                <a href="{{ post.next.link }}">Next &gt;</a>
+            {% else %}
+                <a href="{{ first_post_link }}">Next &gt;</a>
+            {% endif %}
         </div>
     </div>
 {% endblock %}
 {% block share %}{% endblock %}
+{% block body %}
+    {{ parent() }}
+    {% include 'panels/case.html.twig' %}
+{% endblock %}
