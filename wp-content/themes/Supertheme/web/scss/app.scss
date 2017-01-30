@@ -171,7 +171,7 @@
     color: $secondary-color;
   }
   .share {
-    .st_custom {
+    .sharethis > span {
       display: inline-block;
       background-color: $secondary-color;
       width: rem-calc(36px);
@@ -181,7 +181,7 @@
         cursor: pointer;
         background-color: scale-color($secondary-color, $lightness: 15%);
       }
-      &::after {
+      &::before {
         font-family: FontAwesome;
         color: $white;
         font-size: rem-calc(19px);
@@ -189,22 +189,22 @@
         top: rem-calc(2px);
       }
     }
-    .st_sharethis_large::after {
+    .st_sharethis_custom::before {
       content: "\f1e0"
     }
-    .st_facebook_large::after {
+    .st_facebook_custom::before {
       content: "\f09a ";
     }
-    .st_twitter_large::after {
+    .st_twitter_custom::before {
       content: "\f099";
     }
-    .st_linkedin_large::after {
+    .st_linkedin_custom::before {
       content: "\f0e1";
     }
-    .st_pinterest_large::after {
+    .st_pinterest_custom::before {
       content: "\f231";
     }
-    .st_email_large::after {
+    .st_email_custom::before {
       content: "\f003";
     }
   }
@@ -251,4 +251,9 @@
 }
 .post-type-post {
   color: #7c7c7c;
+}
+.post-type-post h1, .post-type-post h2, .post-type-post h3, .post-type-post h4, .post-type-post h5, .post-type-post h6 {
+  a {
+    color: $secondary-color;
+  }
 }

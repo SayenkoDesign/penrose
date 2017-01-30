@@ -13,7 +13,12 @@
             <tr>
                 <td>{{ row.comparison_text }}</td>
                 <td><i class="fa fa-check-circle"></i></td>
-                <td><i class="fa fa-question-circle"></i><div class="content">{{ row.typical_text }}</div></td>
+                <td>
+                    <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="{{ row.typical_text }}">
+                        <i class="fa fa-question-circle"></i>
+                    </span>
+                    <div class="content">{{ row.typical_text }}</div>
+                </td>
             </tr>
         {% endfor %}
         </tbody>

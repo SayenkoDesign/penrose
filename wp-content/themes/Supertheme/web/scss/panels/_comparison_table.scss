@@ -71,7 +71,7 @@
         text-align: left;
         width: rem-calc(430px);
       }
-      i.fa {
+      span {
         color: #ed1c24;
         margin-right: rem-calc(5px);
         font-size: rem-calc(28px);
@@ -83,6 +83,7 @@
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
+          border: none;
         }
       }
       .content {
