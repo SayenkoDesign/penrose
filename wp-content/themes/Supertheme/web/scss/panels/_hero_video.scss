@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
-  padding: $global-padding*2 0;
+  padding: $global-padding*2 0 $global-padding*4;
   font-size: rem-calc(24px);
   .align-middle {
     min-height: rem-calc($global-padding * 15);
@@ -16,10 +16,22 @@
     }
   }
   .fancybox-media {
-    width: rem-calc(70px);
-    height: rem-calc(71px);
-    display: block;
-    background-image: url('../images-min/video-icon.min.png');
+    color: $white;
+    display: inline-block;
     margin: 0 auto $global-padding auto;
+    &:after {
+      content: "";
+      display: inline-block;
+      position: relative;
+      margin-left: $global-padding;
+      top: rem-calc(60px);
+      width: rem-calc(118px);
+      height: rem-calc(125px);
+      background-image: url('../images-min/video-icon.min.png');
+      background-repeat: no-repeat;
+      background-position: right center;
+      border-radius: 100%;
+      border: 4px solid get-color(primary);
+    }
   }
 }
