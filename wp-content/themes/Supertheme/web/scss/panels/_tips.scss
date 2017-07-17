@@ -1,0 +1,32 @@
+.tips {
+  padding: $global-padding*2 0;
+  color: $dark-gray;
+  h2 {
+    color: get-color(secondary);
+    margin: 0;
+    + div {
+      max-width: rem-calc(600px);
+      margin: 0 auto $global-margin*2 auto;
+    }
+  }
+  .tip {
+    margin: $global-margin;
+    border: 1px solid $medium-gray;
+    img {
+      width: 100%;
+      padding: $global-margin;
+    }
+    h5 {
+      text-align: center;
+      background-color: $light-gray;
+      color: get-color(secondary);
+      padding: $global-padding/2 0;
+    }
+    .content {
+      padding: $global-padding $global-padding 0 $global-padding;
+    }
+    .text-right {
+      padding: 0 $global-padding $global-padding $global-padding;
+    }
+  }
+}

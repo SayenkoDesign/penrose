@@ -144,71 +144,18 @@ fields:
                         toolbar: "basic"
                         media_upload: 0
                     -
-                        key: "field_nvaigation_second_heading"
-                        label: "Second heading"
-                        name: "second_heading"
-                        type: "text"
+                        key: "field_nvaigation_video"
+                        label: "Video"
+                        name: "video"
+                        type: "oembed"
                         instructions:
                         required: 1
                         conditional_logic: 0
-                        wrapper: { width: "50", class: "", id: "" }
-                    -
-                        key: "field_nvaigation_second_links"
-                        label: "Second column links"
-                        name: "second_links"
-                        type: "repeater"
-                        instructions:
-                        required: 1
-                        conditional_logic: 0
-                        wrapper: { width: "50", class: "", id: "" }
-                        collapsed:
-                        min: 1
-                        max: 0
-                        layout: block
-                        button_label: Add Row
-                        sub_fields:
-                            -
-                                key:  "field_navigation_second_link"
-                                label:  "Page"
-                                name:  "second_link"
-                                type:  "post_object"
-                                instructions:  ""
-                                required:  1,
-                                conditional_logic:  0,
-                                wrapper:  { width:  "", class:  "", id:  "" }
-                    -
-                        key: "field_nvaigation_third_heading"
-                        label: "Third heading"
-                        name: "third_heading"
-                        type: "text"
-                        instructions:
-                        required: 1
-                        conditional_logic: 0
-                        wrapper: { width: "50", class: "", id: "" }
-                    -
-                        key: "field_nvaigation_third_links"
-                        label: "Third column links"
-                        name: "third_links"
-                        type: "repeater"
-                        instructions:
-                        required: 1
-                        conditional_logic: 0
-                        wrapper: { width: "50", class: "", id: "" }
-                        collapsed:
-                        min: 1
-                        max: 0
-                        layout: block
-                        button_label: Add Row
-                        sub_fields:
-                            -
-                                key:  "field_navigation_third_link"
-                                label:  "Page"
-                                name:  "third_link"
-                                type:  "post_object"
-                                instructions:  ""
-                                required:  1,
-                                conditional_logic:  0,
-                                wrapper:  { width:  "", class:  "", id:  "" }
+                        wrapper: { width: "", class: "", id: "" }
+                        default_value:
+                        tabs: "all"
+                        toolbar: "basic"
+                        media_upload: 0
             -
                 key: "layout_comparison"
                 name: "comparison_table"
@@ -700,3 +647,101 @@ fields:
                         tabs: "all"
                         toolbar: "full"
                         media_upload: 1
+            -
+                key: "layout_tips"
+                name: "tips"
+                label: "tips"
+                instructions: ""
+                display: "block"
+                sub_fields:
+                    -
+                        key: "field_tips_heading"
+                        label: "Heading"
+                        name: "tips_heading"
+                        type: "text"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "", class: "", id: "" }
+                        default_value:
+                    -
+                        key: "field_tips_content"
+                        label: "Content"
+                        name: "tips_content"
+                        type: "wysiwyg"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "", class: "", id: "" }
+                        default_value:
+                        tabs: "all"
+                        toolbar: "full"
+                        media_upload: 0
+                    -
+                        key: "field_tips"
+                        label: "Tips"
+                        name: "tips"
+                        type: "repeater"
+                        instructions:
+                        required: 1
+                        conditional_logic: 0
+                        wrapper: { width: "", class: "", id: "" }
+                        collapsed:
+                        min: 1
+                        max: 0
+                        layout: "block"
+                        button_label: "Add Row"
+                        sub_fields:
+                            -
+                                key: "field_tip_title"
+                                label: "Title"
+                                name: "tip_title"
+                                type: "text"
+                                instructions:
+                                required: 1
+                                conditional_logic: 0
+                                wrapper: { width: "50", class: "", id: "" }
+                                default_value:
+                            -
+                                key: "field_tip_url"
+                                label: "URL"
+                                name: "tip_url"
+                                type: "page_link"
+                                instructions:
+                                required: 1
+                                conditional_logic: 0
+                                wrapper: { width: "50", class: "", id: "" }
+                                default_value:
+                            -
+                                key: "field_tip_content"
+                                label: "Content"
+                                name: "tip_content"
+                                type: "wysiwyg"
+                                instructions:
+                                required: 1
+                                conditional_logic: 0
+                                wrapper: { width: "50", class: "", id: "" }
+                                default_value:
+                                tabs: "all"
+                                toolbar: "basic"
+                                media_upload: 0
+                            -
+                                key: "field_tip_image"
+                                label: "Image"
+                                name: "tip_image"
+                                type: "image"
+                                instructions:
+                                required: 1
+                                conditional_logic: 0
+                                wrapper: { width: "50", class: "", id: "" }
+                                default_value:
+                                return_format:  "array"
+                                preview_size:  "thumbnail"
+                                library:  "all"
+                                min_width:  ""
+                                min_height:  ""
+                                min_size:  ""
+                                max_width:  ""
+                                max_height:  ""
+                                max_size:  ""
+                                mime_types:  ""
