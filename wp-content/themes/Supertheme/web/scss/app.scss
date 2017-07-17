@@ -22,6 +22,13 @@
 @import "panels/left_content";
 @import "panels/right_content";
 @import "panels/center_content";
+@import "panels/tips";
+
+.responsive-embed {
+  iframe {
+    width: 100%;
+  }
+}
 
 .archive, .single-post {
   .author-bar {

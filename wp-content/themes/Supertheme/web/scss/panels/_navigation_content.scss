@@ -37,7 +37,7 @@
       padding: $global-padding*2 $global-padding*3;
     }
     position: relative;
-    &:not(.medium-6) {
+    &:not(.large-8) {
       background: #e8e6e6;
       color: #254e54;
       @include breakpoint(large) {
